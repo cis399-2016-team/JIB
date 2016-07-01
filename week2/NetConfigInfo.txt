@@ -1,0 +1,13 @@
+eth0      Link encap:Ethernet  HWaddr 02:C1:36:F7:25:CF  
+          inet addr:172.31.20.77  Bcast:172.31.31.255  Mask:255.255.240.0
+          inet6 addr: fe80::c1:36ff:fef7:25cf/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:9001  Metric:1
+          RX packets:238599 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:256454 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:90832200 (86.6 MiB)  TX bytes:52961419 (50.5 MiB)
+
+=========================
+Network Configuration
+=========================
+Command Used: ifconfig eth0

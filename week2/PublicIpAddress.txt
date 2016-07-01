@@ -1,0 +1,7 @@
+JIB-jbrodnax1 Public IP Address: 52.36.245.52
+JIB-jbrodnax2 Public IP Address: 52.37.36.132
+JIB-bheng1 Public IP Address: 52.37.2.182
+=========================
+Public IP Address
+=========================
+The public IP address of a given EC2 instance can be found under the description tab of the selected instance on the EC2 console.

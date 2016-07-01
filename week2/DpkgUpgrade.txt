@@ -1,0 +1,6 @@
+Loaded plugins: priorities, update-motd, upgrade-helper
+No packages marked for update
+=========================
+Package Upgrade Output
+=========================
+Command Used: yum upgrade
