@@ -1,6 +1,6 @@
              total       used       free     shared    buffers     cached
-Mem:           491        451         39          0        104        262
--/+ buffers/cache:         84        406
+Mem:           491        456         34          0        105        262
+-/+ buffers/cache:         88        402
 Swap:            0          0          0
 =========================
 Instance Memory Information
