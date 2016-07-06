@@ -1,0 +1,80 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.4  19636  2456 ?        Ss   Jun28   0:02 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    Jun28   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    Jun28   0:02 [ksoftirqd/0]
+root         4  0.0  0.0      0     0 ?        S    Jun28   0:00 [kworker/0:0]
+root         5  0.0  0.0      0     0 ?        S<   Jun28   0:00 [kworker/0:0H]
+root         7  0.0  0.0      0     0 ?        S    Jun28   0:07 [rcu_sched]
+root         8  0.0  0.0      0     0 ?        S    Jun28   0:00 [rcu_bh]
+root         9  0.0  0.0      0     0 ?        S    Jun28   0:00 [migration/0]
+root        10  0.0  0.0      0     0 ?        S    Jun28   0:00 [kdevtmpfs]
+root        11  0.0  0.0      0     0 ?        S<   Jun28   0:00 [netns]
+root        12  0.0  0.0      0     0 ?        S<   Jun28   0:00 [perf]
+root        15  0.0  0.0      0     0 ?        S    Jun28   0:00 [xenwatch]
+root        20  0.0  0.0      0     0 ?        S    Jun28   0:00 [xenbus]
+root        21  0.0  0.0      0     0 ?        S    Jun28   0:18 [kworker/0:1]
+root       128  0.0  0.0      0     0 ?        S    Jun28   0:00 [khungtaskd]
+root       129  0.0  0.0      0     0 ?        S<   Jun28   0:00 [writeback]
+root       131  0.0  0.0      0     0 ?        SN   Jun28   0:00 [ksmd]
+root       132  0.0  0.0      0     0 ?        S<   Jun28   0:00 [crypto]
+root       133  0.0  0.0      0     0 ?        S<   Jun28   0:00 [kintegrityd]
+root       134  0.0  0.0      0     0 ?        S<   Jun28   0:00 [bioset]
+root       136  0.0  0.0      0     0 ?        S<   Jun28   0:00 [kblockd]
+root       487  0.0  0.0      0     0 ?        S<   Jun28   0:00 [md]
+root       615  0.0  0.0      0     0 ?        S    Jun28   0:00 [kswapd0]
+root       616  0.0  0.0      0     0 ?        S<   Jun28   0:00 [vmstat]
+root       688  0.0  0.0      0     0 ?        S    Jun28   0:00 [fsnotify_mark]
+root       707  0.0  0.0      0     0 ?        S<   Jun28   0:00 [kthrotld]
+root       747  0.0  0.0      0     0 ?        S<   Jun28   0:00 [bioset]
+root       751  0.0  0.0      0     0 ?        S<   Jun28   0:00 [deferwq]
+root      1364  0.0  0.0      0     0 ?        S<   Jun28   0:00 [ata_sff]
+root      1393  0.0  0.0      0     0 ?        S    Jun28   0:00 [scsi_eh_0]
+root      1394  0.0  0.0      0     0 ?        S<   Jun28   0:00 [scsi_tmf_0]
+root      1397  0.0  0.0      0     0 ?        S    Jun28   0:00 [scsi_eh_1]
+root      1409  0.0  0.0      0     0 ?        S<   Jun28   0:00 [scsi_tmf_1]
+root      1465  0.0  0.0      0     0 ?        S    Jun28   0:04 [jbd2/xvda1-8]
+root      1466  0.0  0.0      0     0 ?        S<   Jun28   0:00 [ext4-rsv-conver]
+root      1494  0.0  0.0      0     0 ?        S<   Jun28   0:00 [kworker/0:1H]
+root      1512  0.0  0.5  11464  2612 ?        Ss   Jun28   0:00 /sbin/udevd -d
+root      1638  0.0  0.3  11460  1984 ?        S    Jun28   0:00 /sbin/udevd -d
+root      1639  0.0  0.3  11460  1916 ?        S    Jun28   0:00 /sbin/udevd -d
+root      1666  0.0  0.0      0     0 ?        S<   Jun28   0:00 [kpsmoused]
+root      1821  0.0  0.0      0     0 ?        S    Jun28   0:03 [kauditd]
+root      1876  0.0  0.0      0     0 ?        S<   Jun28   0:00 [ipv6_addrconf]
+root      2028  0.0  0.4   9360  2036 ?        Ss   Jun28   0:00 /sbin/dhclient -q -lf /var/lib/dhclient/dhclient-eth0.leases -pf /var/run/dhclient-eth0.pid eth0
+root      2080  0.0  0.3 112072  1964 ?        S<sl Jun28   0:19 auditd
+root      2101  0.0  1.1 247852  5624 ?        Sl   Jun28   0:17 /sbin/rsyslogd -i /var/run/syslogd.pid -c 5
+root      2123  0.0  0.0   4380    88 ?        Ss   Jun28   0:20 rngd --no-tpm=1 --quiet
+rpc       2141  0.0  0.3  35292  2008 ?        Ss   Jun28   0:00 rpcbind
+rpcuser   2162  0.0  0.5  39860  2968 ?        Ss   Jun28   0:00 rpc.statd
+dbus      2193  0.0  0.0  21792   232 ?        Ss   Jun28   0:00 dbus-daemon --system
+ntp       2409  0.0  0.7  29288  3984 ?        Ss   Jun28   0:00 ntpd -u ntp:ntp -p /var/run/ntpd.pid -g
+root      2429  0.0  1.0  88988  5164 ?        Ss   Jun28   0:11 sendmail: accepting connections
+smmsp     2438  0.0  0.8  80444  4064 ?        Ss   Jun28   0:00 sendmail: Queue runner@01:00:00 for /var/spool/clientmqueue
+root      2450  0.0  0.4 119516  2356 ?        Ss   Jun28   0:01 crond
+root      2464  0.0  0.0  17068   156 ?        Ss   Jun28   0:00 /usr/sbin/atd
+root      2497  0.0  0.3   6460  1516 ttyS0    Ss+  Jun28   0:00 /sbin/agetty ttyS0 9600 vt100-nav
+root      2501  0.0  0.2   4312  1400 tty1     Ss+  Jun28   0:00 /sbin/mingetty /dev/tty1
+root      2504  0.0  0.2   4312  1392 tty2     Ss+  Jun28   0:00 /sbin/mingetty /dev/tty2
+root      2506  0.0  0.2   4312  1480 tty3     Ss+  Jun28   0:00 /sbin/mingetty /dev/tty3
+root      2508  0.0  0.2   4312  1476 tty4     Ss+  Jun28   0:00 /sbin/mingetty /dev/tty4
+root      2510  0.0  0.2   4312  1400 tty5     Ss+  Jun28   0:00 /sbin/mingetty /dev/tty5
+root      2512  0.0  0.2   4312  1384 tty6     Ss+  Jun28   0:00 /sbin/mingetty /dev/tty6
+root      2691  0.0  0.5  77840  3016 ?        Ss   Jun28   0:16 /usr/sbin/sshd
+root     12628  0.0  1.3 117808  6728 ?        Ss   20:19   0:00 sshd: ec2-user [priv]
+ec2-user 12630  0.0  0.7 117808  4008 ?        S    20:19   0:00 sshd: ec2-user@pts/0
+ec2-user 12631  0.0  0.6 115348  3456 pts/0    Ss   20:19   0:00 -bash
+root     12969  0.0  1.3 116464  6680 ?        Ss   20:53   0:00 sshd: root [priv]
+sshd     12970  0.0  0.9  79260  4584 ?        S    20:53   0:00 sshd: root [net] 
+root     12981  0.0  1.3 116600  6600 ?        Ss   20:54   0:00 sshd: root [priv]
+sshd     12982  0.0  0.9  79260  4756 ?        S    20:54   0:00 sshd: root [net] 
+root     12983  0.0  1.3 116600  6600 ?        Ss   20:54   0:00 sshd: root [priv]
+sshd     12984  0.0  0.9  79260  4756 ?        S    20:54   0:00 sshd: root [net] 
+ec2-user 12987  0.0  0.5 113088  2920 pts/0    S+   20:54   0:00 /bin/sh ./week2script.sh
+ec2-user 12996  0.0  0.4 117204  2456 pts/0    R+   20:54   0:00 ps aux
+root     22978  0.0  0.0      0     0 ?        S    Jul01   0:00 [kworker/u30:0]
+root     24595  0.0  0.0      0     0 ?        S    Jun29   0:02 [kworker/u30:2]
+=========================
+Running Processes
+=========================
+Command Used: ps aux

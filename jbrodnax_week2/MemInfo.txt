@@ -1,0 +1,8 @@
+             total       used       free     shared    buffers     cached
+Mem:           491        446         44          0        134        204
+-/+ buffers/cache:        107        383
+Swap:            0          0          0
+=========================
+Instance Memory Information
+=========================
+Command Used: free -m

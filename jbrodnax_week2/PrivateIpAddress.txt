@@ -1,0 +1,6 @@
+JIB-jbrodnax1 Private IP Address: 172.31.22.225
+JIB-jbrodnax2 Private IP Address: 172.31.20.77
+JIB-bheng1 Private IP Address: 10.0.2.53
+=========================
+Private IP Address
+=========================

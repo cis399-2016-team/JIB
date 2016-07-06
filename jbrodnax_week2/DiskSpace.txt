@@ -1,0 +1,12 @@
+Filesystem      Size  Used Avail Use% Mounted on
+proc               0     0     0    - /proc
+sysfs              0     0     0    - /sys
+/dev/xvda1      7.8G  1.4G  6.4G  18% /
+devtmpfs        238M   56K  238M   1% /dev
+devpts             0     0     0    - /dev/pts
+tmpfs           246M     0  246M   0% /dev/shm
+none               0     0     0    - /proc/sys/fs/binfmt_misc
+=========================
+Instance Disk Space
+=========================
+Command Used: df -ah
