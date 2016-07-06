@@ -1,0 +1,666 @@
+Script started on Wed 06 Jul 2016 10:20:49 PM UTC
+]0;ubuntu@ip-10-0-2-53: ~/Documentsubuntu@ip-10-0-2-53:~/Documents$ sudo bash
+
+===================================== main =====================================
+[main]
+alwaysprompt = True
+assumeyes = False
+bandwidth = 0
+bugtracker_url = http://yum.baseurl.org/report
+cache = 0
+cachedir = /var/cache/yum
+clean_requirements_on_remove = False
+color = auto
+color_list_available_downgrade = dim,cyan
+color_list_available_install = normal
+color_list_available_reinstall = bold,underline,green
+color_list_available_upgrade = bold,blue
+color_list_installed_extra = bold,red
+color_list_installed_newer = bold,yellow
+color_list_installed_older = bold
+color_list_installed_reinstall = normal
+color_search_match = bold
+color_update_installed = normal
+color_update_local = bold
+color_update_remote = normal
+commands = 
+debuglevel = 2
+diskspacecheck = True
+distroverpkg = redhat-release
+enable_group_conditionals = True
+enabled = True
+enablegroups = True
+errorlevel = 2
+exactarch = True
+exactarchlist = kernel,
+   kernel-smp,
+   kernel-hugemem,
+   kernel-enterprise,
+   kernel-bigmem,
+   kernel-devel,
+   kernel-PAE,
+   kernel-PAE-debug
+exclude = 
+exit_on_lock = False
+failovermethod = roundrobin
+gaftonmode = False
+gpgcheck = False
+group_package_types = mandatory,
+   default
+groupremove_leaf_only = False
+history_list_view = single-user-commands
+history_record = True
+history_record_packages = yum,
+   rpm
+http_caching = all
+installonly_limit = 0
+installonlypkgs = kernel,
+   kernel-bigmem,
+   kernel-enterprise,
+   kernel-smp,
+   kernel-modules,
+   kernel-debug,
+   kernel-unsupported,
+   kernel-source,
+   kernel-devel,
+   kernel-PAE,
+   kernel-PAE-debug
+installroot = /
+keepalive = True
+keepcache = True
+kernelpkgnames = kernel,
+   kernel-smp,
+   kernel-enterprise,
+   kernel-bigmem,
+   kernel-BOOT,
+   kernel-PAE,
+   kernel-PAE-debug
+loadts_ignoremissing = False
+loadts_ignorerpm = False
+localpkg_gpgcheck = False
+logfile = /var/log/yum.log
+mdpolicy = group:primary
+metadata_expire = 21600
+mirrorlist_expire = 86400
+multilib_policy = all
+obsoletes = True
+overwrite_groups = False
+password = 
+persistdir = /var/lib/yum
+pluginconfpath = /etc/yum/pluginconf.d
+pluginpath = /usr/share/yum-plugins,
+   /usr/lib/yum-plugins
+plugins = False
+progess_obj = 
+protected_multilib = True
+protected_packages = yum
+proxy = 
+proxy_password = 
+proxy_username = 
+recent = 7
+repo_gpgcheck = False
+reposdir = /etc/yum/repos.d,
+   /etc/yum.repos.d
+retries = 10
+rpm_check_debug = True
+rpmverbosity = info
+showdupesfromrepos = False
+skip_broken = False
+sslcacert = 
+sslclientcert = 
+sslclientkey = 
+sslverify = True
+syslog_device = /dev/log
+syslog_facility = LOG_USER
+syslog_ident = 
+throttle = 0
+timeout = 30.0
+tolerant = True
+tsflags = 
+username = 
+
+]0;root@ip-10-0-2-53: ~/Documentsroot@ip-10-0-2-53:~/Documents# git[K[K[Kyum check-update
+There are no enabled repos.
+ Run "yum repolist all" to see the repos you have.
+ You can enable repos with yum-config-manager --enable <repo>
+]0;root@ip-10-0-2-53: ~/Documentsroot@ip-10-0-2-53:~/Documents# yum check[K[K[K[K[K[K[K[K[Kapt-get update
+0% [Working]            Ign http://us-west-2.ec2.archive.ubuntu.com trusty InRelease
+            10% [Connecting to security.ubuntu.com (91.189.88.149)]                                                       Get:1 http://us-west-2.ec2.archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+                                                       0% [1 InRelease 0 B/65.9 kB 0%] [Connecting to security.ubuntu.com (91.189.88.1                                                                               100% [Connecting to security.ubuntu.com (91.189.88.149)]                                                        Hit http://us-west-2.ec2.archive.ubuntu.com trusty-backports InRelease
+100% [Connecting to security.ubuntu.com (91.189.88.149)]                                                        100% [1 InRelease gpgv 65.9 kB] [Waiting for headers] [Connecting to security.u                                                                               Hit http://us-west-2.ec2.archive.ubuntu.com trusty Release.gpg
+100% [1 InRelease gpgv 65.9 kB] [Connecting to security.ubuntu.com (91.189.88.1                                                                               Hit http://us-west-2.ec2.archive.ubuntu.com trusty Release
+100% [1 InRelease gpgv 65.9 kB] [Connecting to security.ubuntu.com (91.189.88.1                                                                               100% [Connecting to security.ubuntu.com (91.189.88.149)]                                                        100% [InRelease gpgv 65.9 kB] [Waiting for headers] [Connecting to security.ubu                                                                               Get:2 http://us-west-2.ec2.archive.ubuntu.com trusty-updates/main Sources [278 kB]
+19% [InRelease gpgv 65.9 kB] [2 Sources 1,121 B/278 kB 0%] [Connecting to secur100% [InRelease gpgv 65.9 kB] [Connecting to security.ubuntu.com (91.189.88.149                                                                               100% [Waiting for headers] [Connecting to security.ubuntu.com (91.189.88.149)]                                                                              Get:3 http://us-west-2.ec2.archive.ubuntu.com trusty-updates/restricted Sources [5,352 B]
+100% [Waiting for headers] [Connecting to security.ubuntu.com (91.189.88.149)]                                                                              100% [Release gpgv 58.5 kB] [Waiting for headers] [Connecting to security.ubunt100% [2 Sources bzip2 0 B] [Release gpgv 58.5 kB] [Waiting for headers] [Connec                                                                               Get:4 http://us-west-2.ec2.archive.ubuntu.com trusty-updates/universe Sources [158 kB]
+88% [2 Sources bzip2 0 B] [Release gpgv 58.5 kB] [4 Sources 95.2 kB/158 kB 60%]100% [2 Sources bzip2 0 B] [Release gpgv 58.5 kB] [Connecting to security.ubunt                                                                               Get:5 http://us-west-2.ec2.archive.ubuntu.com trusty-updates/multiverse Sources [5,936 B]
+100% [2 Sources bzip2 0 B] [Release gpgv 58.5 kB] [5 Sources 5,468 B/5,936 B 92100% [2 Sources bzip2 0 B] [Release gpgv 58.5 kB] [Waiting for headers] [Connec                                                                               Get:6 http://us-west-2.ec2.archive.ubuntu.com trusty-updates/main amd64 Packages [790 kB]
+39% [2 Sources bzip2 0 B] [Release gpgv 58.5 kB] [6 Packages 1,121 B/790 kB 0%]53% [2 Sources bzip2 0 B] [6 Packages 174 kB/790 kB 22%] [Connecting to securit                                                                               100% [2 Sources bzip2 0 B] [Connecting to security.ubuntu.com (91.189.88.149)]                                                                              Get:7 http://us-west-2.ec2.archive.ubuntu.com trusty-updates/restricted amd64 Packages [15.9 kB]
+                                                                              100% [2 Sources bzip2 0 B] [Waiting for headers] [Connecting to security.ubuntu                                                                               Get:8 http://us-west-2.ec2.archive.ubuntu.com trusty-updates/universe amd64 Packages [363 kB]
+78% [2 Sources bzip2 0 B] [8 Packages 1,121 B/363 kB 0%] [Connecting to securit                                                                               100% [2 Sources bzip2 0 B] [Connecting to security.ubuntu.com (91.189.88.149)]                                                                              Get:9 http://us-west-2.ec2.archive.ubuntu.com trusty-updates/multiverse amd64 Packages [13.2 kB]
+                                                                              99% [2 Sources bzip2 0 B] [9 Packages 0 B/13.2 kB 0%] [Connecting to security.u                                                                               100% [2 Sources bzip2 0 B] [Connecting to security.ubuntu.com (91.189.88.149)]                                                                              Get:10 http://us-west-2.ec2.archive.ubuntu.com trusty-updates/main Translation-en [396 kB]
+                                                                              84% [2 Sources bzip2 0 B] [10 Translation-en 69.2 kB/396 kB 17%] [Connecting to100% [2 Sources bzip2 0 B] [Waiting for headers] [Connecting to security.ubuntu                                                                               Get:11 http://us-west-2.ec2.archive.ubuntu.com trusty-updates/multiverse Translation-en [7,227 B]
+100% [2 Sources bzip2 0 B] [Waiting for headers] [Connecting to security.ubuntu                                                                               Get:12 http://us-west-2.ec2.archive.ubuntu.com trusty-updates/restricted Translation-en [3,699 B]
+100% [2 Sources bzip2 0 B] [Waiting for headers] [Connecting to security.ubuntu                                                                               Get:13 http://us-west-2.ec2.archive.ubuntu.com trusty-updates/universe Translation-en [191 kB]
+93% [2 Sources bzip2 0 B] [13 Translation-en 35.3 kB/191 kB 19%] [Connecting to                                                                               100% [2 Sources bzip2 0 B] [Connecting to security.ubuntu.com (91.189.88.149)]                                                                              100% [Waiting for headers] [Waiting for headers]                                                100% [3 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]                                                                      100% [Waiting for headers] [Waiting for headers]                                                100% [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]                                                                      Hit http://us-west-2.ec2.archive.ubuntu.com trusty-backports/main Sources
+                                                                      100% [4 Sources bzip2 0 B] [Waiting for headers]                                                Hit http://us-west-2.ec2.archive.ubuntu.com trusty-backports/restricted Sources
+                                                Hit http://us-west-2.ec2.archive.ubuntu.com trusty-backports/universe Sources
+                                                Hit http://us-west-2.ec2.archive.ubuntu.com trusty-backports/multiverse Sources
+                                                Hit http://us-west-2.ec2.archive.ubuntu.com trusty-backports/main amd64 Packages
+                                                Hit http://us-west-2.ec2.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+                                                Hit http://us-west-2.ec2.archive.ubuntu.com trusty-backports/universe amd64 Packages
+                                                Hit http://us-west-2.ec2.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+                                                Hit http://us-west-2.ec2.archive.ubuntu.com trusty-backports/main Translation-en
+                                                Hit http://us-west-2.ec2.archive.ubuntu.com trusty-backports/multiverse Translation-en
+100% [4 Sources bzip2 0 B] [Waiting for headers]                                                100% [Sources 33.7 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for                                                                               Hit http://us-west-2.ec2.archive.ubuntu.com trusty-backports/restricted Translation-en
+100% [Sources 33.7 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for                                                                               Hit http://us-west-2.ec2.archive.ubuntu.com trusty-backports/universe Translation-en
+100% [Sources 33.7 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for                                                                               Hit http://us-west-2.ec2.archive.ubuntu.com trusty/main Sources
+100% [Sources 33.7 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for                                                                               100% [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]                                                                      100% [Sources 0 B] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for hea                                                                               100% [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]                                                                      100% [Sources 141 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for                                                                                Hit http://us-west-2.ec2.archive.ubuntu.com trusty/restricted Sources
+100% [Sources 141 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for                                                                                Hit http://us-west-2.ec2.archive.ubuntu.com trusty/universe Sources
+100% [Sources 141 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for                                                                                Hit http://us-west-2.ec2.archive.ubuntu.com trusty/multiverse Sources
+100% [Sources 141 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for                                                                                Hit http://us-west-2.ec2.archive.ubuntu.com trusty/main amd64 Packages
+100% [Sources 141 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for                                                                                100% [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]                                                                      100% [Sources 4,444 B] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for                                                                               100% [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]                                                                      100% [Packages 59.3 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting fo                                                                               100% [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]                                                                      100% [Packages 0 B] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for he                                                                               100% [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]                                                                      100% [Packages 220 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for                                                                               100% [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]                                                                      100% [Packages 3,396 B] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting fo                                                                               100% [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]                                                                      100% [Translation-en 28.1 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Wait                                                                               100% [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]                                                                      100% [Translation-en 2,242 B] [4 Sources bzip2 0 B] [Waiting for headers] [Wait                                                                               100% [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]                                                                      100% [Translation-en 0 B] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting                                                                                100% [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]                                                                      100% [Translation-en 155 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiti                                                                               100% [4 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]                                                                      100% [Sources 5,000 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting fo                                                                               Hit http://us-west-2.ec2.archive.ubuntu.com trusty/restricted amd64 Packages
+                                                                               100% [Sources 5,000 kB] [4 Sources bzip2 0 B] [Waiting for headers]                                                                   Hit http://us-west-2.ec2.archive.ubuntu.com trusty/universe amd64 Packages
+                                                                   100% [Sources 5,000 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting fo                                                                               Hit http://us-west-2.ec2.archive.ubuntu.com trusty/multiverse amd64 Packages
+100% [Sources 5,000 kB] [4 Sources bzip2 0 B] [Waiting for headers] [Waiting fo                                                                               100% [Sources 5,000 kB] [Waiting for headers] [Waiting for headers]                                                                   100% [Sources 5,000 kB] [5 Sources bzip2 0 B] [Waiting for headers] [Waiting fo                                                                               Hit http://us-west-2.ec2.archive.ubuntu.com trusty/main Translation-en
+100% [Sources 5,000 kB] [5 Sources bzip2 0 B] [Waiting for headers] [Waiting fo                                                                               Hit http://us-west-2.ec2.archive.ubuntu.com trusty/multiverse Translation-en
+100% [Sources 5,000 kB] [5 Sources bzip2 0 B] [Waiting for headers] [Waiting fo                                                                               100% [Sources 5,000 kB] [Waiting for headers] [Waiting for headers]                                                                   100% [Sources 5,000 kB] [6 Packages bzip2 0 B] [Waiting for headers] [Waiting f                                                                               Hit http://us-west-2.ec2.archive.ubuntu.com trusty/restricted Translation-en
+100% [Sources 5,000 kB] [6 Packages bzip2 0 B] [Waiting for headers] [Waiting f                                                                               Hit http://us-west-2.ec2.archive.ubuntu.com trusty/universe Translation-en
+100% [Sources 5,000 kB] [6 Packages bzip2 0 B] [Waiting for headers] [Waiting f                                                                               Get:14 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+98% [Sources 5,000 kB] [6 Packages bzip2 0 B] [Waiting for headers] [14 InRelea                                                                               Ign http://us-west-2.ec2.archive.ubuntu.com trusty/main Translation-en_US
+98% [Sources 5,000 kB] [6 Packages bzip2 0 B] [Waiting for headers] [14 InRelea                                                                               Ign http://us-west-2.ec2.archive.ubuntu.com trusty/multiverse Translation-en_US
+98% [Sources 5,000 kB] [6 Packages bzip2 0 B] [Waiting for headers] [14 InRelea                                                                               Ign http://us-west-2.ec2.archive.ubuntu.com trusty/restricted Translation-en_US
+98% [Sources 5,000 kB] [6 Packages bzip2 0 B] [Waiting for headers] [14 InRelea                                                                               Ign http://us-west-2.ec2.archive.ubuntu.com trusty/universe Translation-en_US
+98% [Sources 5,000 kB] [6 Packages bzip2 0 B] [14 InRelease 14.2 kB/65.9 kB 22%                                                                               99% [6 Packages bzip2 0 B] [14 InRelease 14.2 kB/65.9 kB 22%]                                                             99% [Sources 22.9 kB] [6 Packages bzip2 0 B] [14 InRelease 14.2 kB/65.9 kB 22%]                                                                               99% [6 Packages bzip2 0 B] [14 InRelease 14.2 kB/65.9 kB 22%]                                                             99% [Sources 27.9 MB] [6 Packages bzip2 0 B] [14 InRelease 14.2 kB/65.9 kB 22%]                                                                               100% [Sources 27.9 MB] [6 Packages bzip2 0 B]                                             100% [Sources 27.9 MB] [6 Packages bzip2 0 B] [14 InRelease gpgv 65.9 kB]                                                                         100% [Sources 27.9 MB] [6 Packages bzip2 0 B]                                             100% [Sources 27.9 MB] [Waiting for headers]                                            100% [Sources 27.9 MB] [7 Packages bzip2 0 B] [Waiting for headers]                                                                   100% [Sources 27.9 MB] [Waiting for headers]                                            100% [Sources 27.9 MB] [8 Packages bzip2 0 B] [Waiting for headers]                                                                   Get:15 http://security.ubuntu.com trusty-security/main Sources [118 kB]
+                                                                   99% [Sources 27.9 MB] [8 Packages bzip2 0 B] [15 Sources 75.0 kB/118 kB 64%]                                                                            100% [Sources 27.9 MB] [8 Packages bzip2 0 B]                                             100% [Sources 27.9 MB] [Waiting for headers]                                            100% [Sources 27.9 MB] [9 Packages bzip2 0 B] [Waiting for headers]                                                                   100% [Sources 27.9 MB] [Waiting for headers]                                            100% [Sources 27.9 MB] [10 Translation-en bzip2 0 B] [Waiting for headers]                                                                          Get:16 http://security.ubuntu.com trusty-security/universe Sources [38.0 kB]
+                                                                          100% [Sources 27.9 MB] [10 Translation-en bzip2 0 B] [16 Sources 38.0 kB/38.0 k                                                                               100% [Sources 27.9 MB] [10 Translation-en bzip2 0 B] [Waiting for headers]                                                                          Get:17 http://security.ubuntu.com trusty-security/main amd64 Packages [502 kB]
+                                                                          96% [Sources 27.9 MB] [10 Translation-en bzip2 0 B] [17 Packages 192 kB/502 kB                                                                                99% [10 Translation-en bzip2 0 B] [17 Packages 192 kB/502 kB 38%]                                                                 99% [Sources 711 kB] [10 Translation-en bzip2 0 B] [17 Packages 192 kB/502 kB 3                                                                               100% [Sources 711 kB] [17 Packages 485 kB/502 kB 97%]                                                     100% [Sources 711 kB] [11 Translation-en bzip2 0 B] [17 Packages 485 kB/502 kB                                                                                100% [Sources 711 kB] [17 Packages 485 kB/502 kB 97%]                                                     100% [Sources 711 kB] [12 Translation-en bzip2 0 B] [17 Packages 485 kB/502 kB                                                                                100% [Sources 711 kB] [17 Packages 485 kB/502 kB 97%]                                                     100% [Sources 711 kB] [13 Translation-en bzip2 0 B] [17 Packages 485 kB/502 kB                                                                                100% [13 Translation-en bzip2 0 B] [17 Packages 485 kB/502 kB 97%]                                                                  100% [Packages 8,235 kB] [13 Translation-en bzip2 0 B] [17 Packages 485 kB/502                                                                                100% [Packages 8,235 kB] [17 Packages 485 kB/502 kB 97%]                                                        100% [Packages 8,235 kB] [15 Sources bzip2 0 B] [17 Packages 485 kB/502 kB 97%]                                                                               100% [Packages 8,235 kB] [17 Packages 491 kB/502 kB 98%]                                                        100% [Packages 8,235 kB] [16 Sources bzip2 0 B] [17 Packages 491 kB/502 kB 98%]                                                                               100% [Packages 8,235 kB] [17 Packages 491 kB/502 kB 98%]                                                        100% [17 Packages 491 kB/502 kB 98%]                                    100% [Packages 184 kB] [17 Packages 491 kB/502 kB 98%]                                                      100% [17 Packages 491 kB/502 kB 98%]                                    100% [Packages 31.7 MB] [17 Packages 491 kB/502 kB 98%]                                                       100% [Packages 31.7 MB] [Waiting for headers]                                             100% [Packages 31.7 MB] [17 Packages bzip2 0 B] [Waiting for headers]                                                                     Get:18 http://security.ubuntu.com trusty-security/universe amd64 Packages [130 kB]
+                                                                     100% [Packages 31.7 MB] [17 Packages bzip2 0 B] [18 Packages 130 kB/130 kB 100%                                                                               100% [Packages 31.7 MB] [17 Packages bzip2 0 B]                                               Get:19 http://security.ubuntu.com trusty-security/main Translation-en [277 kB]
+                                               100% [Packages 31.7 MB] [17 Packages bzip2 0 B] [19 Translation-en 126 kB/277 k                                                                               100% [Packages 31.7 MB] [19 Translation-en 217 kB/277 kB 78%]                                                             100% [Packages 31.7 MB] [18 Packages bzip2 0 B] [19 Translation-en 217 kB/277 k                                                                               100% [Packages 31.7 MB] [19 Translation-en 217 kB/277 kB 78%]                                                             100% [19 Translation-en 259 kB/277 kB 94%]                                          100% [Packages 664 kB] [19 Translation-en 259 kB/277 kB 94%]                                                            100% [19 Translation-en 259 kB/277 kB 94%]                                          100% [Translation-en 4,149 kB] [19 Translation-en 259 kB/277 kB 94%]                                                                    100% [19 Translation-en 259 kB/277 kB 94%]                                          100% [Translation-en 409 kB] [19 Translation-en 259 kB/277 kB 94%]                                                                  100% [Translation-en 409 kB] [Waiting for headers]                                                  100% [Translation-en 409 kB] [19 Translation-en bzip2 0 B] [Waiting for headers                                                                               100% [19 Translation-en bzip2 0 B] [Waiting for headers]                                                        100% [Translation-en 21.2 kB] [19 Translation-en bzip2 0 B] [Waiting for header                                                                               100% [19 Translation-en bzip2 0 B] [Waiting for headers]                                                        100% [Translation-en 18.6 MB] [19 Translation-en bzip2 0 B] [Waiting for header                                                                               Get:20 http://security.ubuntu.com trusty-security/universe Translation-en [77.2 kB]
+100% [Translation-en 18.6 MB] [19 Translation-en bzip2 0 B] [20 Translation-en                                                                                100% [Translation-en 18.6 MB] [19 Translation-en bzip2 0 B]                                                           100% [Translation-en 18.6 MB]                             100% [Translation-en 18.6 MB] [20 Translation-en bzip2 0 B]                                                           100% [Translation-en 18.6 MB]                             100% [Working]              Fetched 3,502 kB in 2s (1,291 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 9%Reading package lists... 9%Reading package lists... 9%Reading package lists... 9%Reading package lists... 45%Reading package lists... 45%Reading package lists... 46%Reading package lists... 46%Reading package lists... 51%Reading package lists... 51%Reading package lists... 51%Reading package lists... 51%Reading package lists... 51%Reading package lists... 51%Reading package lists... 51%Reading package lists... 73%Reading package lists... 73%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 93%Reading package lists... 93%Reading package lists... 94%Reading package lists... 94%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+]0;root@ip-10-0-2-53: ~/Documentsroot@ip-10-0-2-53:~/Documents# apt-get [K[K[K[Kget upd[Kgrade
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 1%Reading state information... Done
+Calculating upgrade... Done
+The following packages have been kept back:
+  linux-headers-generic linux-headers-virtual linux-image-virtual
+  linux-virtual
+The following packages will be upgraded:
+  apport apt apt-transport-https apt-utils base-files bash-completion
+  bind9-host ca-certificates cloud-guest-utils cloud-init coreutils cpio curl
+  dnsutils dosfstools dpkg gcc-4.8-base grub-common grub-legacy-ec2 grub-pc
+  grub-pc-bin grub2-common ifupdown initramfs-tools initramfs-tools-bin
+  initscripts klibc-utils libapt-inst1.5 libapt-pkg4.12 libbind9-90 libc-bin
+  libc6 libcurl3 libcurl3-gnutls libdns100 libdrm2 libexpat1 libgcrypt11
+  libgnutls-openssl27 libgnutls26 libisc95 libisccc90 libisccfg90 libklibc
+  libldap-2.4-2 liblwres90 libnuma1 libpam-modules libpam-modules-bin
+  libpam-runtime libpam-systemd libpam0g libpci3 libpcre3 libssl1.0.0
+  libstdc++6 libsystemd-daemon0 libsystemd-login0 libtasn1-6 libudev1 libxml2
+  login lsb-base lsb-release multiarch-support ntpdate openssh-client
+  openssh-server openssh-sftp-server openssl os-prober passwd pciutils perl
+  perl-base perl-modules python3-apport python3-problem-report rsync
+  systemd-services sysv-rc sysvinit-utils tzdata udev usbutils wget
+86 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+Need to get 31.4 MB of archives.
+After this operation, 208 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+0% [Working]            Get:1 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main base-files amd64 7.2ubuntu5.4 [67.6 kB]
+            0% [1 base-files 0 B/67.6 kB 0%]                                0% [Working]            Get:2 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main coreutils amd64 8.21-1ubuntu5.4 [1,091 kB]
+            0% [2 coreutils 0 B/1,091 kB 0%]                                4% [Working]            Get:3 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main dpkg amd64 1.17.5ubuntu5.7 [1,956 kB]
+            4% [3 dpkg 0 B/1,956 kB 0%]                           10% [Working]             Get:4 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main login amd64 1:4.1.5.1-1ubuntu9.2 [301 kB]
+             10% [4 login 0 B/301 kB 0%]                           11% [Working]             Get:5 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main perl amd64 5.18.2-2ubuntu1.1 [2,648 kB]
+             11% [5 perl 0 B/2,648 kB 0%]                            19% [Working]             Get:6 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main perl-base amd64 5.18.2-2ubuntu1.1 [1,146 kB]
+             19% [6 perl-base 0 B/1,146 kB 0%]                                 23% [Working]             Get:7 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main perl-modules all 5.18.2-2ubuntu1.1 [2,673 kB]
+             23% [7 perl-modules 0 B/2,673 kB 0%]                                    31% [Working]             Get:8 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libc-bin amd64 2.19-0ubuntu6.9 [1,165 kB]
+             31% [8 libc-bin 0 B/1,165 kB 0%]                                35% [Working]             Get:9 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libc6 amd64 2.19-0ubuntu6.9 [4,717 kB]
+             35% [9 libc6 0 B/4,717 kB 0%]                             50% [Working]             Get:10 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main gcc-4.8-base amd64 4.8.4-2ubuntu1~14.04.3 [16.2 kB]
+             50% [10 gcc-4.8-base 0 B/16.2 kB 0%]                                    50% [Working]             Get:11 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libstdc++6 amd64 4.8.4-2ubuntu1~14.04.3 [259 kB]
+             50% [11 libstdc++6 0 B/259 kB 0%]                                 51% [Working]             Get:12 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libapt-pkg4.12 amd64 1.0.1ubuntu2.14 [638 kB]
+             51% [12 libapt-pkg4.12 0 B/638 kB 0%]                                     53% [Working]             Get:13 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main apt amd64 1.0.1ubuntu2.14 [955 kB]
+             53% [13 apt 0 B/955 kB 0%]                          56% [Working]             Get:14 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libpam0g amd64 1.1.8-1ubuntu2.2 [56.1 kB]
+             56% [14 libpam0g 0 B/56.1 kB 0%]                                56% [Working]             Get:15 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libpam-modules-bin amd64 1.1.8-1ubuntu2.2 [31.2 kB]
+             56% [15 libpam-modules-bin 0 B/31.2 kB 0%]                                          56% [Working]             Get:16 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libpam-modules amd64 1.1.8-1ubuntu2.2 [234 kB]
+             56% [16 libpam-modules 0 B/234 kB 0%]                                     57% [Working]             Get:17 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libpcre3 amd64 1:8.31-2ubuntu2.3 [144 kB]
+             57% [17 libpcre3 0 B/144 kB 0%]                               58% [Working]             Get:18 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libapt-inst1.5 amd64 1.0.1ubuntu2.14 [58.6 kB]
+             58% [18 libapt-inst1.5 0 B/58.6 kB 0%]                                      58% [Working]             Get:19 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libexpat1 amd64 2.1.0-4ubuntu1.3 [71.1 kB]
+             58% [19 libexpat1 0 B/71.1 kB 0%]                                 58% [Working]             Get:20 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libgcrypt11 amd64 1.5.3-2ubuntu4.3 [239 kB]
+             58% [20 libgcrypt11 0 B/239 kB 0%]                                  59% [Working]             Get:21 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libtasn1-6 amd64 3.4-3ubuntu0.4 [43.6 kB]
+             59% [21 libtasn1-6 0 B/43.6 kB 0%]                                  59% [Working]             Get:22 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libgnutls-openssl27 amd64 2.12.23-12ubuntu2.5 [18.4 kB]
+             59% [22 libgnutls-openssl27 0 B/18.4 kB 0%]                                           59% [Working]             Get:23 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libgnutls26 amd64 2.12.23-12ubuntu2.5 [393 kB]
+             59% [23 libgnutls26 0 B/393 kB 0%]                                  60% [Working]             Get:24 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libssl1.0.0 amd64 1.0.1f-1ubuntu2.19 [828 kB]
+             60% [24 libssl1.0.0 0 B/828 kB 0%]                                  63% [Working]             Get:25 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main ntpdate amd64 1:4.2.6.p5+dfsg-3ubuntu2.14.04.8 [57.2 kB]
+             63% [25 ntpdate 0 B/57.2 kB 0%]                               63% [Working]             Get:26 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libdrm2 amd64 2.4.64-1~ubuntu14.04.1 [25.4 kB]
+             63% [26 libdrm2 0 B/25.4 kB 0%]                               63% [Working]             Get:27 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main sysvinit-utils amd64 2.88dsf-41ubuntu6.3 [52.9 kB]
+             63% [27 sysvinit-utils 0 B/52.9 kB 0%]                                      63% [Working]             Get:28 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main sysv-rc all 2.88dsf-41ubuntu6.3 [36.6 kB]
+             63% [28 sysv-rc 0 B/36.6 kB 0%]                               63% [Working]             Get:29 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main lsb-base all 4.1+Debian11ubuntu6.1 [13.0 kB]
+             63% [29 lsb-base 0 B/13.0 kB 0%]                                64% [Working]             Get:30 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main passwd amd64 1:4.1.5.1-1ubuntu9.2 [759 kB]
+             64% [30 passwd 0 B/759 kB 0%]                             66% [Working]             Get:31 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main initscripts amd64 2.88dsf-41ubuntu6.3 [27.7 kB]
+             66% [31 initscripts 0 B/27.7 kB 0%]                                   66% [Working]             Get:32 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main udev amd64 204-5ubuntu20.19 [735 kB]
+             66% [32 udev 0 B/735 kB 0%]                           68% [Working]             Get:33 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libudev1 amd64 204-5ubuntu20.19 [33.8 kB]
+             68% [33 libudev1 0 B/33.8 kB 0%]                                68% [Working]             Get:34 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main bash-completion all 1:2.1-4ubuntu0.2 [153 kB]
+             68% [34 bash-completion 0 B/153 kB 0%]                                      69% [Working]             Get:35 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libldap-2.4-2 amd64 2.4.31-1+nmu2ubuntu8.3 [153 kB]
+             69% [35 libldap-2.4-2 0 B/153 kB 0%]                                    69% [Working]             Get:36 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libcurl3-gnutls amd64 7.35.0-1ubuntu2.6 [165 kB]
+             69% [36 libcurl3-gnutls 0 B/165 kB 0%]                                      70% [Working]             Get:37 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libnuma1 amd64 2.0.9~rc5-1ubuntu3.14.04.2 [20.5 kB]
+             70% [37 libnuma1 0 B/20.5 kB 0%]                                70% [Working]             Get:38 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libpam-systemd amd64 204-5ubuntu20.19 [25.5 kB]
+             70% [38 libpam-systemd 0 B/25.5 kB 0%]                                      70% [Working]             Get:39 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main systemd-services amd64 204-5ubuntu20.19 [197 kB]
+             70% [39 systemd-services 0 B/197 kB 0%]                                       71% [Working]             Get:40 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libsystemd-daemon0 amd64 204-5ubuntu20.19 [10.2 kB]
+             71% [40 libsystemd-daemon0 0 B/10.2 kB 0%]                                          71% [Working]             Get:41 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libpam-runtime all 1.1.8-1ubuntu2.2 [37.8 kB]
+             71% [41 libpam-runtime 0 B/37.8 kB 0%]                                      71% [Working]             Get:42 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main pciutils amd64 1:3.2.1-1ubuntu5.1 [282 kB]
+             71% [42 pciutils 0 B/282 kB 0%]                               72% [Working]             Get:43 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libpci3 amd64 1:3.2.1-1ubuntu5.1 [26.3 kB]
+             72% [43 libpci3 0 B/26.3 kB 0%]                               72% [Working]             Get:44 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libsystemd-login0 amd64 204-5ubuntu20.19 [27.2 kB]
+             72% [44 libsystemd-login0 0 B/27.2 kB 0%]                                         72% [Working]             Get:45 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libxml2 amd64 2.9.1+dfsg1-3ubuntu4.8 [573 kB]
+             72% [45 libxml2 0 B/573 kB 0%]                              74% [Working]             Get:46 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main curl amd64 7.35.0-1ubuntu2.6 [123 kB]
+             74% [46 curl 0 B/123 kB 0%]                           74% [Working]             Get:47 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libcurl3 amd64 7.35.0-1ubuntu2.6 [172 kB]
+             74% [47 libcurl3 0 B/172 kB 0%]                               75% [Working]             Get:48 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main multiarch-support amd64 2.19-0ubuntu6.9 [4,484 B]
+             75% [48 multiarch-support 0 B/4,484 B 0%]                                         75% [Working]             Get:49 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main tzdata all 2016f-0ubuntu0.14.04 [166 kB]
+             75% [49 tzdata 0 B/166 kB 0%]                             75% [Working]             Get:50 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main apt-utils amd64 1.0.1ubuntu2.14 [172 kB]
+             75% [50 apt-utils 0 B/172 kB 0%]                                76% [Working]             Get:51 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main lsb-release all 4.1+Debian11ubuntu6.1 [11.5 kB]
+             76% [51 lsb-release 0 B/11.5 kB 0%]                                   76% [Working]             Get:52 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main cpio amd64 2.11+dfsg-1ubuntu1.2 [73.8 kB]
+             76% [52 cpio 0 B/73.8 kB 0%]                            76% [Working]             Get:53 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main ifupdown amd64 0.7.47.2ubuntu4.4 [53.1 kB]
+             76% [53 ifupdown 0 B/53.1 kB 0%]                                76% [Working]             Get:54 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main klibc-utils amd64 2.0.3-0ubuntu1.14.04.1 [107 kB]
+             76% [54 klibc-utils 0 B/107 kB 0%]                                  77% [Working]             Get:55 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libklibc amd64 2.0.3-0ubuntu1.14.04.1 [40.8 kB]
+             77% [55 libklibc 0 B/40.8 kB 0%]                                77% [Working]             Get:56 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main initramfs-tools all 0.103ubuntu4.3 [44.4 kB]
+             77% [56 initramfs-tools 0 B/44.4 kB 0%]                                       77% [Working]             Get:57 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main initramfs-tools-bin amd64 0.103ubuntu4.3 [9,172 B]
+             77% [57 initramfs-tools-bin 0 B/9,172 B 0%]                                           77% [Working]             Get:58 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main apt-transport-https amd64 1.0.1ubuntu2.14 [25.0 kB]
+             77% [58 apt-transport-https 0 B/25.0 kB 0%]                                           77% [Working]             Get:59 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main bind9-host amd64 1:9.9.5.dfsg-3ubuntu0.8 [46.3 kB]
+             77% [59 bind9-host 0 B/46.3 kB 0%]                                  77% [Working]             Get:60 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main dnsutils amd64 1:9.9.5.dfsg-3ubuntu0.8 [96.9 kB]
+             77% [60 dnsutils 0 B/96.9 kB 0%]                                77% [Working]             Get:61 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libisc95 amd64 1:9.9.5.dfsg-3ubuntu0.8 [147 kB]
+             77% [61 libisc95 0 B/147 kB 0%]                               78% [Working]             Get:62 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libdns100 amd64 1:9.9.5.dfsg-3ubuntu0.8 [645 kB]
+             78% [62 libdns100 0 B/645 kB 0%]                                80% [Working]             Get:63 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libisccc90 amd64 1:9.9.5.dfsg-3ubuntu0.8 [15.7 kB]
+             80% [63 libisccc90 0 B/15.7 kB 0%]                                  80% [Working]             Get:64 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libisccfg90 amd64 1:9.9.5.dfsg-3ubuntu0.8 [36.2 kB]
+             80% [64 libisccfg90 0 B/36.2 kB 0%]                                   80% [Working]             Get:65 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main liblwres90 amd64 1:9.9.5.dfsg-3ubuntu0.8 [32.8 kB]
+             80% [65 liblwres90 0 B/32.8 kB 0%]                                  80% [Working]             Get:66 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main libbind9-90 amd64 1:9.9.5.dfsg-3ubuntu0.8 [22.0 kB]
+             80% [66 libbind9-90 0 B/22.0 kB 0%]                                   80% [Working]             Get:67 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main openssl amd64 1.0.1f-1ubuntu2.19 [490 kB]
+             80% [67 openssl 0 B/490 kB 0%]                              82% [Working]             Get:68 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main ca-certificates all 20160104ubuntu0.14.04.1 [190 kB]
+             82% [68 ca-certificates 0 B/190 kB 0%]                                      82% [Working]             Get:69 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main dosfstools amd64 3.0.26-1ubuntu0.1 [60.1 kB]
+             82% [69 dosfstools 0 B/60.1 kB 0%]                                  83% [Working]             Get:70 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main openssh-sftp-server amd64 1:6.6p1-2ubuntu2.7 [34.2 kB]
+             83% [70 openssh-sftp-server 0 B/34.2 kB 0%]                                           83% [Working]             Get:71 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main openssh-server amd64 1:6.6p1-2ubuntu2.7 [322 kB]
+             83% [71 openssh-server 0 B/322 kB 0%]                                     84% [Working]             Get:72 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main openssh-client amd64 1:6.6p1-2ubuntu2.7 [564 kB]
+             84% [72 openssh-client 0 B/564 kB 0%]                                     86% [Working]             Get:73 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main rsync amd64 3.1.0-2ubuntu0.2 [284 kB]
+             86% [73 rsync 0 B/284 kB 0%]                            87% [Working]             Get:74 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main usbutils amd64 1:007-2ubuntu1.1 [205 kB]
+             87% [74 usbutils 0 B/205 kB 0%]                               87% [Working]             Get:75 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main wget amd64 1.15-1ubuntu1.14.04.2 [271 kB]
+             87% [75 wget 0 B/271 kB 0%]                           88% [Working]             Get:76 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main grub-pc amd64 2.02~beta2-9ubuntu1.8 [173 kB]
+             88% [76 grub-pc 0 B/173 kB 0%]                              89% [Working]             Get:77 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main grub-pc-bin amd64 2.02~beta2-9ubuntu1.8 [879 kB]
+             89% [77 grub-pc-bin 0 B/879 kB 0%]                                  91% [Working]             Get:78 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main grub2-common amd64 2.02~beta2-9ubuntu1.8 [501 kB]
+             91% [78 grub2-common 0 B/501 kB 0%]                                   93% [Working]             Get:79 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main grub-common amd64 2.02~beta2-9ubuntu1.8 [1,682 kB]
+             93% [79 grub-common 0 B/1,682 kB 0%]                                    98% [Working]             Get:80 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main python3-problem-report all 2.14.1-0ubuntu3.21 [9,710 B]
+             98% [80 python3-problem-report 0 B/9,710 B 0%]                                              98% [Working]             Get:81 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main python3-apport all 2.14.1-0ubuntu3.21 [75.3 kB]
+             98% [81 python3-apport 0 B/75.3 kB 0%]                                      99% [Working]             Get:82 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main apport all 2.14.1-0ubuntu3.21 [182 kB]
+             99% [82 apport 0 B/182 kB 0%]                             99% [Working]             Get:83 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main os-prober amd64 1.63ubuntu1.1 [18.0 kB]
+             99% [83 os-prober 0 B/18.0 kB 0%]                                 99% [Working]             Get:84 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main cloud-guest-utils all 0.27-0ubuntu9.2 [13.8 kB]
+             99% [84 cloud-guest-utils 0 B/13.8 kB 0%]                                         99% [Working]             Get:85 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main cloud-init all 0.7.5-0ubuntu1.18 [198 kB]
+             99% [85 cloud-init 0 B/198 kB 0%]                                 100% [Working]              Get:86 http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates/main grub-legacy-ec2 all 0.7.5-0ubuntu1.18 [22.5 kB]
+              100% [86 grub-legacy-ec2 0 B/22.5 kB 0%]                                        100% [Working]              Fetched 31.4 MB in 0s (33.6 MB/s)
+Extracting templates from packages: 34%Extracting templates from packages: 69%Extracting templates from packages: 100%
+Preconfiguring packages ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56428 files and directories currently installed.)
+Preparing to unpack .../base-files_7.2ubuntu5.4_amd64.deb ...
+Unpacking base-files (7.2ubuntu5.4) over (7.2ubuntu5.3) ...
+Processing triggers for plymouth-theme-ubuntu-text (0.8.8-0ubuntu17.1) ...
+update-initramfs: deferring update (trigger activated)
+Processing triggers for install-info (5.2.0.dfsg.1-2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for initramfs-tools (0.103ubuntu4.2) ...
+update-initramfs: Generating /boot/initrd.img-3.13.0-74-generic
+Setting up base-files (7.2ubuntu5.4) ...
+Installing new version of config file /etc/issue ...
+Installing new version of config file /etc/issue.net ...
+Installing new version of config file /etc/lsb-release ...
+Installing new version of config file /etc/os-release ...
+Processing triggers for plymouth-theme-ubuntu-text (0.8.8-0ubuntu17.1) ...
+update-initramfs: deferring update (trigger activated)
+Processing triggers for initramfs-tools (0.103ubuntu4.2) ...
+update-initramfs: Generating /boot/initrd.img-3.13.0-74-generic
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56428 files and directories currently installed.)
+Preparing to unpack .../coreutils_8.21-1ubuntu5.4_amd64.deb ...
+Unpacking coreutils (8.21-1ubuntu5.4) over (8.21-1ubuntu5.3) ...
+Processing triggers for install-info (5.2.0.dfsg.1-2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up coreutils (8.21-1ubuntu5.4) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56428 files and directories currently installed.)
+Preparing to unpack .../dpkg_1.17.5ubuntu5.7_amd64.deb ...
+Unpacking dpkg (1.17.5ubuntu5.7) over (1.17.5ubuntu5.5) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up dpkg (1.17.5ubuntu5.7) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56428 files and directories currently installed.)
+Preparing to unpack .../login_1%3a4.1.5.1-1ubuntu9.2_amd64.deb ...
+Unpacking login (1:4.1.5.1-1ubuntu9.2) over (1:4.1.5.1-1ubuntu9.1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up login (1:4.1.5.1-1ubuntu9.2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56428 files and directories currently installed.)
+Preparing to unpack .../perl_5.18.2-2ubuntu1.1_amd64.deb ...
+Unpacking perl (5.18.2-2ubuntu1.1) over (5.18.2-2ubuntu1) ...
+Preparing to unpack .../perl-base_5.18.2-2ubuntu1.1_amd64.deb ...
+Unpacking perl-base (5.18.2-2ubuntu1.1) over (5.18.2-2ubuntu1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up perl-base (5.18.2-2ubuntu1.1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56428 files and directories currently installed.)
+Preparing to unpack .../perl-modules_5.18.2-2ubuntu1.1_all.deb ...
+Unpacking perl-modules (5.18.2-2ubuntu1.1) over (5.18.2-2ubuntu1) ...
+Preparing to unpack .../libc-bin_2.19-0ubuntu6.9_amd64.deb ...
+Unpacking libc-bin (2.19-0ubuntu6.9) over (2.19-0ubuntu6.6) ...
+Preparing to unpack .../libc6_2.19-0ubuntu6.9_amd64.deb ...
+Unpacking libc6:amd64 (2.19-0ubuntu6.9) over (2.19-0ubuntu6.6) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libc6:amd64 (2.19-0ubuntu6.9) ...
+Setting up libc-bin (2.19-0ubuntu6.9) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56427 files and directories currently installed.)
+Preparing to unpack .../gcc-4.8-base_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+Unpacking gcc-4.8-base:amd64 (4.8.4-2ubuntu1~14.04.3) over (4.8.4-2ubuntu1~14.04) ...
+Setting up gcc-4.8-base:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56427 files and directories currently installed.)
+Preparing to unpack .../libstdc++6_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+Unpacking libstdc++6:amd64 (4.8.4-2ubuntu1~14.04.3) over (4.8.4-2ubuntu1~14.04) ...
+Setting up libstdc++6:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56427 files and directories currently installed.)
+Preparing to unpack .../libapt-pkg4.12_1.0.1ubuntu2.14_amd64.deb ...
+Unpacking libapt-pkg4.12:amd64 (1.0.1ubuntu2.14) over (1.0.1ubuntu2.10) ...
+Setting up libapt-pkg4.12:amd64 (1.0.1ubuntu2.14) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56427 files and directories currently installed.)
+Preparing to unpack .../apt_1.0.1ubuntu2.14_amd64.deb ...
+Unpacking apt (1.0.1ubuntu2.14) over (1.0.1ubuntu2.10) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up apt (1.0.1ubuntu2.14) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56427 files and directories currently installed.)
+Preparing to unpack .../libpam0g_1.1.8-1ubuntu2.2_amd64.deb ...
+Unpacking libpam0g:amd64 (1.1.8-1ubuntu2.2) over (1.1.8-1ubuntu2) ...
+Setting up libpam0g:amd64 (1.1.8-1ubuntu2.2) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56427 files and directories currently installed.)
+Preparing to unpack .../libpam-modules-bin_1.1.8-1ubuntu2.2_amd64.deb ...
+Unpacking libpam-modules-bin (1.1.8-1ubuntu2.2) over (1.1.8-1ubuntu2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libpam-modules-bin (1.1.8-1ubuntu2.2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56427 files and directories currently installed.)
+Preparing to unpack .../libpam-modules_1.1.8-1ubuntu2.2_amd64.deb ...
+Unpacking libpam-modules:amd64 (1.1.8-1ubuntu2.2) over (1.1.8-1ubuntu2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libpam-modules:amd64 (1.1.8-1ubuntu2.2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56427 files and directories currently installed.)
+Preparing to unpack .../libpcre3_1%3a8.31-2ubuntu2.3_amd64.deb ...
+Unpacking libpcre3:amd64 (1:8.31-2ubuntu2.3) over (1:8.31-2ubuntu2.1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libpcre3:amd64 (1:8.31-2ubuntu2.3) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56427 files and directories currently installed.)
+Preparing to unpack .../libapt-inst1.5_1.0.1ubuntu2.14_amd64.deb ...
+Unpacking libapt-inst1.5:amd64 (1.0.1ubuntu2.14) over (1.0.1ubuntu2.10) ...
+Preparing to unpack .../libexpat1_2.1.0-4ubuntu1.3_amd64.deb ...
+Unpacking libexpat1:amd64 (2.1.0-4ubuntu1.3) over (2.1.0-4ubuntu1.1) ...
+Preparing to unpack .../libgcrypt11_1.5.3-2ubuntu4.3_amd64.deb ...
+Unpacking libgcrypt11:amd64 (1.5.3-2ubuntu4.3) over (1.5.3-2ubuntu4.2) ...
+Preparing to unpack .../libtasn1-6_3.4-3ubuntu0.4_amd64.deb ...
+Unpacking libtasn1-6:amd64 (3.4-3ubuntu0.4) over (3.4-3ubuntu0.3) ...
+Preparing to unpack .../libgnutls-openssl27_2.12.23-12ubuntu2.5_amd64.deb ...
+Unpacking libgnutls-openssl27:amd64 (2.12.23-12ubuntu2.5) over (2.12.23-12ubuntu2.4) ...
+Preparing to unpack .../libgnutls26_2.12.23-12ubuntu2.5_amd64.deb ...
+Unpacking libgnutls26:amd64 (2.12.23-12ubuntu2.5) over (2.12.23-12ubuntu2.4) ...
+Preparing to unpack .../libssl1.0.0_1.0.1f-1ubuntu2.19_amd64.deb ...
+Unpacking libssl1.0.0:amd64 (1.0.1f-1ubuntu2.19) over (1.0.1f-1ubuntu2.16) ...
+Preparing to unpack .../ntpdate_1%3a4.2.6.p5+dfsg-3ubuntu2.14.04.8_amd64.deb ...
+Unpacking ntpdate (1:4.2.6.p5+dfsg-3ubuntu2.14.04.8) over (1:4.2.6.p5+dfsg-3ubuntu2.14.04.6) ...
+Preparing to unpack .../libdrm2_2.4.64-1~ubuntu14.04.1_amd64.deb ...
+Unpacking libdrm2:amd64 (2.4.64-1~ubuntu14.04.1) over (2.4.60-2~ubuntu14.04.1) ...
+Preparing to unpack .../sysvinit-utils_2.88dsf-41ubuntu6.3_amd64.deb ...
+Unpacking sysvinit-utils (2.88dsf-41ubuntu6.3) over (2.88dsf-41ubuntu6.2) ...
+Preparing to unpack .../sysv-rc_2.88dsf-41ubuntu6.3_all.deb ...
+Unpacking sysv-rc (2.88dsf-41ubuntu6.3) over (2.88dsf-41ubuntu6.2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up sysvinit-utils (2.88dsf-41ubuntu6.3) ...
+Setting up sysv-rc (2.88dsf-41ubuntu6.3) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56427 files and directories currently installed.)
+Preparing to unpack .../lsb-base_4.1+Debian11ubuntu6.1_all.deb ...
+Unpacking lsb-base (4.1+Debian11ubuntu6.1) over (4.1+Debian11ubuntu6) ...
+Setting up lsb-base (4.1+Debian11ubuntu6.1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56428 files and directories currently installed.)
+Preparing to unpack .../passwd_1%3a4.1.5.1-1ubuntu9.2_amd64.deb ...
+Unpacking passwd (1:4.1.5.1-1ubuntu9.2) over (1:4.1.5.1-1ubuntu9.1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up passwd (1:4.1.5.1-1ubuntu9.2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56428 files and directories currently installed.)
+Preparing to unpack .../initscripts_2.88dsf-41ubuntu6.3_amd64.deb ...
+Unpacking initscripts (2.88dsf-41ubuntu6.3) over (2.88dsf-41ubuntu6.2) ...
+Preparing to unpack .../udev_204-5ubuntu20.19_amd64.deb ...
+Adding 'diversion of /bin/udevadm to /bin/udevadm.upgrade by fake-udev'
+Unpacking udev (204-5ubuntu20.19) over (204-5ubuntu20.15) ...
+Preparing to unpack .../libudev1_204-5ubuntu20.19_amd64.deb ...
+Unpacking libudev1:amd64 (204-5ubuntu20.19) over (204-5ubuntu20.15) ...
+Preparing to unpack .../bash-completion_1%3a2.1-4ubuntu0.2_all.deb ...
+Unpacking bash-completion (1:2.1-4ubuntu0.2) over (1:2.1-4ubuntu0.1) ...
+Preparing to unpack .../libldap-2.4-2_2.4.31-1+nmu2ubuntu8.3_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.31-1+nmu2ubuntu8.3) over (2.4.31-1+nmu2ubuntu8.2) ...
+Preparing to unpack .../libcurl3-gnutls_7.35.0-1ubuntu2.6_amd64.deb ...
+Unpacking libcurl3-gnutls:amd64 (7.35.0-1ubuntu2.6) over (7.35.0-1ubuntu2.5) ...
+Preparing to unpack .../libnuma1_2.0.9~rc5-1ubuntu3.14.04.2_amd64.deb ...
+Unpacking libnuma1:amd64 (2.0.9~rc5-1ubuntu3.14.04.2) over (2.0.9~rc5-1ubuntu3.14.04.1) ...
+Preparing to unpack .../libpam-systemd_204-5ubuntu20.19_amd64.deb ...
+systemd-logind stop/waiting
+Unpacking libpam-systemd:amd64 (204-5ubuntu20.19) over (204-5ubuntu20.15) ...
+Preparing to unpack .../systemd-services_204-5ubuntu20.19_amd64.deb ...
+Unpacking systemd-services (204-5ubuntu20.19) over (204-5ubuntu20.15) ...
+Preparing to unpack .../libsystemd-daemon0_204-5ubuntu20.19_amd64.deb ...
+Unpacking libsystemd-daemon0:amd64 (204-5ubuntu20.19) over (204-5ubuntu20.15) ...
+Preparing to unpack .../libpam-runtime_1.1.8-1ubuntu2.2_all.deb ...
+Unpacking libpam-runtime (1.1.8-1ubuntu2.2) over (1.1.8-1ubuntu2) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libpam-runtime (1.1.8-1ubuntu2.2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56429 files and directories currently installed.)
+Preparing to unpack .../pciutils_1%3a3.2.1-1ubuntu5.1_amd64.deb ...
+Unpacking pciutils (1:3.2.1-1ubuntu5.1) over (1:3.2.1-1ubuntu5) ...
+Preparing to unpack .../libpci3_1%3a3.2.1-1ubuntu5.1_amd64.deb ...
+Unpacking libpci3:amd64 (1:3.2.1-1ubuntu5.1) over (1:3.2.1-1ubuntu5) ...
+Preparing to unpack .../libsystemd-login0_204-5ubuntu20.19_amd64.deb ...
+Unpacking libsystemd-login0:amd64 (204-5ubuntu20.19) over (204-5ubuntu20.15) ...
+Preparing to unpack .../libxml2_2.9.1+dfsg1-3ubuntu4.8_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.1+dfsg1-3ubuntu4.8) over (2.9.1+dfsg1-3ubuntu4.6) ...
+Preparing to unpack .../curl_7.35.0-1ubuntu2.6_amd64.deb ...
+Unpacking curl (7.35.0-1ubuntu2.6) over (7.35.0-1ubuntu2.5) ...
+Preparing to unpack .../libcurl3_7.35.0-1ubuntu2.6_amd64.deb ...
+Unpacking libcurl3:amd64 (7.35.0-1ubuntu2.6) over (7.35.0-1ubuntu2.5) ...
+Preparing to unpack .../multiarch-support_2.19-0ubuntu6.9_amd64.deb ...
+Unpacking multiarch-support (2.19-0ubuntu6.9) over (2.19-0ubuntu6.6) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up multiarch-support (2.19-0ubuntu6.9) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56429 files and directories currently installed.)
+Preparing to unpack .../tzdata_2016f-0ubuntu0.14.04_all.deb ...
+Unpacking tzdata (2016f-0ubuntu0.14.04) over (2015g-0ubuntu0.14.04) ...
+Setting up tzdata (2016f-0ubuntu0.14.04) ...
+
+Current default time zone: 'Etc/UTC'
+Local time is now:      Wed Jul  6 22:22:15 UTC 2016.
+Universal Time is now:  Wed Jul  6 22:22:15 UTC 2016.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56445 files and directories currently installed.)
+Preparing to unpack .../apt-utils_1.0.1ubuntu2.14_amd64.deb ...
+Unpacking apt-utils (1.0.1ubuntu2.14) over (1.0.1ubuntu2.10) ...
+Preparing to unpack .../lsb-release_4.1+Debian11ubuntu6.1_all.deb ...
+Unpacking lsb-release (4.1+Debian11ubuntu6.1) over (4.1+Debian11ubuntu6) ...
+Preparing to unpack .../cpio_2.11+dfsg-1ubuntu1.2_amd64.deb ...
+Unpacking cpio (2.11+dfsg-1ubuntu1.2) over (2.11+dfsg-1ubuntu1.1) ...
+Preparing to unpack .../ifupdown_0.7.47.2ubuntu4.4_amd64.deb ...
+Unpacking ifupdown (0.7.47.2ubuntu4.4) over (0.7.47.2ubuntu4.1) ...
+Preparing to unpack .../klibc-utils_2.0.3-0ubuntu1.14.04.1_amd64.deb ...
+Unpacking klibc-utils (2.0.3-0ubuntu1.14.04.1) over (2.0.3-0ubuntu1) ...
+Preparing to unpack .../libklibc_2.0.3-0ubuntu1.14.04.1_amd64.deb ...
+Unpacking libklibc (2.0.3-0ubuntu1.14.04.1) over (2.0.3-0ubuntu1) ...
+Preparing to unpack .../initramfs-tools_0.103ubuntu4.3_all.deb ...
+Unpacking initramfs-tools (0.103ubuntu4.3) over (0.103ubuntu4.2) ...
+Preparing to unpack .../initramfs-tools-bin_0.103ubuntu4.3_amd64.deb ...
+Unpacking initramfs-tools-bin (0.103ubuntu4.3) over (0.103ubuntu4.2) ...
+Preparing to unpack .../apt-transport-https_1.0.1ubuntu2.14_amd64.deb ...
+Unpacking apt-transport-https (1.0.1ubuntu2.14) over (1.0.1ubuntu2.10) ...
+Preparing to unpack .../bind9-host_1%3a9.9.5.dfsg-3ubuntu0.8_amd64.deb ...
+Unpacking bind9-host (1:9.9.5.dfsg-3ubuntu0.8) over (1:9.9.5.dfsg-3ubuntu0.6) ...
+Preparing to unpack .../dnsutils_1%3a9.9.5.dfsg-3ubuntu0.8_amd64.deb ...
+Unpacking dnsutils (1:9.9.5.dfsg-3ubuntu0.8) over (1:9.9.5.dfsg-3ubuntu0.6) ...
+Preparing to unpack .../libisc95_1%3a9.9.5.dfsg-3ubuntu0.8_amd64.deb ...
+Unpacking libisc95 (1:9.9.5.dfsg-3ubuntu0.8) over (1:9.9.5.dfsg-3ubuntu0.6) ...
+Preparing to unpack .../libdns100_1%3a9.9.5.dfsg-3ubuntu0.8_amd64.deb ...
+Unpacking libdns100 (1:9.9.5.dfsg-3ubuntu0.8) over (1:9.9.5.dfsg-3ubuntu0.6) ...
+Preparing to unpack .../libisccc90_1%3a9.9.5.dfsg-3ubuntu0.8_amd64.deb ...
+Unpacking libisccc90 (1:9.9.5.dfsg-3ubuntu0.8) over (1:9.9.5.dfsg-3ubuntu0.6) ...
+Preparing to unpack .../libisccfg90_1%3a9.9.5.dfsg-3ubuntu0.8_amd64.deb ...
+Unpacking libisccfg90 (1:9.9.5.dfsg-3ubuntu0.8) over (1:9.9.5.dfsg-3ubuntu0.6) ...
+Preparing to unpack .../liblwres90_1%3a9.9.5.dfsg-3ubuntu0.8_amd64.deb ...
+Unpacking liblwres90 (1:9.9.5.dfsg-3ubuntu0.8) over (1:9.9.5.dfsg-3ubuntu0.6) ...
+Preparing to unpack .../libbind9-90_1%3a9.9.5.dfsg-3ubuntu0.8_amd64.deb ...
+Unpacking libbind9-90 (1:9.9.5.dfsg-3ubuntu0.8) over (1:9.9.5.dfsg-3ubuntu0.6) ...
+Preparing to unpack .../openssl_1.0.1f-1ubuntu2.19_amd64.deb ...
+Unpacking openssl (1.0.1f-1ubuntu2.19) over (1.0.1f-1ubuntu2.16) ...
+Preparing to unpack .../ca-certificates_20160104ubuntu0.14.04.1_all.deb ...
+Unpacking ca-certificates (20160104ubuntu0.14.04.1) over (20141019ubuntu0.14.04.1) ...
+Preparing to unpack .../dosfstools_3.0.26-1ubuntu0.1_amd64.deb ...
+Unpacking dosfstools (3.0.26-1ubuntu0.1) over (3.0.26-1) ...
+Preparing to unpack .../openssh-sftp-server_1%3a6.6p1-2ubuntu2.7_amd64.deb ...
+Unpacking openssh-sftp-server (1:6.6p1-2ubuntu2.7) over (1:6.6p1-2ubuntu2.4) ...
+Preparing to unpack .../openssh-server_1%3a6.6p1-2ubuntu2.7_amd64.deb ...
+Unpacking openssh-server (1:6.6p1-2ubuntu2.7) over (1:6.6p1-2ubuntu2.4) ...
+Preparing to unpack .../openssh-client_1%3a6.6p1-2ubuntu2.7_amd64.deb ...
+Unpacking openssh-client (1:6.6p1-2ubuntu2.7) over (1:6.6p1-2ubuntu2.4) ...
+Preparing to unpack .../rsync_3.1.0-2ubuntu0.2_amd64.deb ...
+Unpacking rsync (3.1.0-2ubuntu0.2) over (3.1.0-2ubuntu0.1) ...
+Preparing to unpack .../usbutils_1%3a007-2ubuntu1.1_amd64.deb ...
+Unpacking usbutils (1:007-2ubuntu1.1) over (1:007-2ubuntu1) ...
+Preparing to unpack .../wget_1.15-1ubuntu1.14.04.2_amd64.deb ...
+Unpacking wget (1.15-1ubuntu1.14.04.2) over (1.15-1ubuntu1.14.04.1) ...
+Preparing to unpack .../grub-pc_2.02~beta2-9ubuntu1.8_amd64.deb ...
+Unpacking grub-pc (2.02~beta2-9ubuntu1.8) over (2.02~beta2-9ubuntu1.7) ...
+Preparing to unpack .../grub-pc-bin_2.02~beta2-9ubuntu1.8_amd64.deb ...
+Unpacking grub-pc-bin (2.02~beta2-9ubuntu1.8) over (2.02~beta2-9ubuntu1.7) ...
+Preparing to unpack .../grub2-common_2.02~beta2-9ubuntu1.8_amd64.deb ...
+Unpacking grub2-common (2.02~beta2-9ubuntu1.8) over (2.02~beta2-9ubuntu1.7) ...
+Preparing to unpack .../grub-common_2.02~beta2-9ubuntu1.8_amd64.deb ...
+Unpacking grub-common (2.02~beta2-9ubuntu1.8) over (2.02~beta2-9ubuntu1.7) ...
+Preparing to unpack .../python3-problem-report_2.14.1-0ubuntu3.21_all.deb ...
+Unpacking python3-problem-report (2.14.1-0ubuntu3.21) over (2.14.1-0ubuntu3.19) ...
+Preparing to unpack .../python3-apport_2.14.1-0ubuntu3.21_all.deb ...
+Unpacking python3-apport (2.14.1-0ubuntu3.21) over (2.14.1-0ubuntu3.19) ...
+Preparing to unpack .../apport_2.14.1-0ubuntu3.21_all.deb ...
+apport stop/waiting
+Unpacking apport (2.14.1-0ubuntu3.21) over (2.14.1-0ubuntu3.19) ...
+Preparing to unpack .../os-prober_1.63ubuntu1.1_amd64.deb ...
+Unpacking os-prober (1.63ubuntu1.1) over (1.63ubuntu1) ...
+Preparing to unpack .../cloud-guest-utils_0.27-0ubuntu9.2_all.deb ...
+Unpacking cloud-guest-utils (0.27-0ubuntu9.2) over (0.27-0ubuntu9.1) ...
+Preparing to unpack .../cloud-init_0.7.5-0ubuntu1.18_all.deb ...
+Unpacking cloud-init (0.7.5-0ubuntu1.18) over (0.7.5-0ubuntu1.15) ...
+Preparing to unpack .../grub-legacy-ec2_0.7.5-0ubuntu1.18_all.deb ...
+Leaving 'diversion of /usr/sbin/grub-set-default to /usr/sbin/grub-set-default.real by grub-legacy-ec2'
+Unpacking grub-legacy-ec2 (0.7.5-0ubuntu1.18) over (0.7.5-0ubuntu1.15) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+Processing triggers for install-info (5.2.0.dfsg.1-2) ...
+Processing triggers for shared-mime-info (1.2-0ubuntu3) ...
+Setting up libapt-inst1.5:amd64 (1.0.1ubuntu2.14) ...
+Setting up libexpat1:amd64 (2.1.0-4ubuntu1.3) ...
+Setting up libgcrypt11:amd64 (1.5.3-2ubuntu4.3) ...
+Setting up libtasn1-6:amd64 (3.4-3ubuntu0.4) ...
+Setting up libgnutls26:amd64 (2.12.23-12ubuntu2.5) ...
+Setting up libgnutls-openssl27:amd64 (2.12.23-12ubuntu2.5) ...
+Setting up libssl1.0.0:amd64 (1.0.1f-1ubuntu2.19) ...
+Setting up ntpdate (1:4.2.6.p5+dfsg-3ubuntu2.14.04.8) ...
+Installing new version of config file /etc/network/if-up.d/ntpdate ...
+Setting up libdrm2:amd64 (2.4.64-1~ubuntu14.04.1) ...
+Setting up initscripts (2.88dsf-41ubuntu6.3) ...
+Installing new version of config file /etc/init.d/ondemand ...
+Setting up libudev1:amd64 (204-5ubuntu20.19) ...
+Setting up udev (204-5ubuntu20.19) ...
+udev stop/waiting
+udev start/running, process 7367
+Removing 'diversion of /bin/udevadm to /bin/udevadm.upgrade by fake-udev'
+update-initramfs: deferring update (trigger activated)
+Setting up bash-completion (1:2.1-4ubuntu0.2) ...
+Setting up libldap-2.4-2:amd64 (2.4.31-1+nmu2ubuntu8.3) ...
+Setting up libcurl3-gnutls:amd64 (7.35.0-1ubuntu2.6) ...
+Setting up libnuma1:amd64 (2.0.9~rc5-1ubuntu3.14.04.2) ...
+Setting up libsystemd-daemon0:amd64 (204-5ubuntu20.19) ...
+Setting up systemd-services (204-5ubuntu20.19) ...
+Setting up libpam-systemd:amd64 (204-5ubuntu20.19) ...
+systemd-logind start/running, process 7997
+Setting up libpci3:amd64 (1:3.2.1-1ubuntu5.1) ...
+Setting up pciutils (1:3.2.1-1ubuntu5.1) ...
+Setting up libsystemd-login0:amd64 (204-5ubuntu20.19) ...
+Setting up libxml2:amd64 (2.9.1+dfsg1-3ubuntu4.8) ...
+Setting up libcurl3:amd64 (7.35.0-1ubuntu2.6) ...
+Setting up curl (7.35.0-1ubuntu2.6) ...
+Setting up apt-utils (1.0.1ubuntu2.14) ...
+Setting up lsb-release (4.1+Debian11ubuntu6.1) ...
+Setting up cpio (2.11+dfsg-1ubuntu1.2) ...
+Setting up libklibc (2.0.3-0ubuntu1.14.04.1) ...
+Setting up klibc-utils (2.0.3-0ubuntu1.14.04.1) ...
+Setting up initramfs-tools-bin (0.103ubuntu4.3) ...
+Setting up initramfs-tools (0.103ubuntu4.3) ...
+update-initramfs: deferring update (trigger activated)
+Setting up apt-transport-https (1.0.1ubuntu2.14) ...
+Setting up libisc95 (1:9.9.5.dfsg-3ubuntu0.8) ...
+Setting up libdns100 (1:9.9.5.dfsg-3ubuntu0.8) ...
+Setting up libisccc90 (1:9.9.5.dfsg-3ubuntu0.8) ...
+Setting up libisccfg90 (1:9.9.5.dfsg-3ubuntu0.8) ...
+Setting up libbind9-90 (1:9.9.5.dfsg-3ubuntu0.8) ...
+Setting up liblwres90 (1:9.9.5.dfsg-3ubuntu0.8) ...
+Setting up bind9-host (1:9.9.5.dfsg-3ubuntu0.8) ...
+Setting up dnsutils (1:9.9.5.dfsg-3ubuntu0.8) ...
+Setting up openssl (1.0.1f-1ubuntu2.19) ...
+Setting up ca-certificates (20160104ubuntu0.14.04.1) ...
+Setting up dosfstools (3.0.26-1ubuntu0.1) ...
+Setting up openssh-client (1:6.6p1-2ubuntu2.7) ...
+Setting up openssh-sftp-server (1:6.6p1-2ubuntu2.7) ...
+Setting up openssh-server (1:6.6p1-2ubuntu2.7) ...
+ssh stop/waiting
+ssh start/running, process 11653
+Setting up rsync (3.1.0-2ubuntu0.2) ...
+update-rc.d: warning: default stop runlevel arguments (0 1 6) do not match rsync Default-Stop values (none)
+ System start/stop links for /etc/init.d/rsync already exist.
+Setting up usbutils (1:007-2ubuntu1.1) ...
+Setting up wget (1.15-1ubuntu1.14.04.2) ...
+Setting up grub-common (2.02~beta2-9ubuntu1.8) ...
+Setting up grub2-common (2.02~beta2-9ubuntu1.8) ...
+Setting up grub-pc-bin (2.02~beta2-9ubuntu1.8) ...
+Setting up grub-pc (2.02~beta2-9ubuntu1.8) ...
+Installing for i386-pc platform.
+Installation finished. No error reported.
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-3.13.0-74-generic
+Found initrd image: /boot/initrd.img-3.13.0-74-generic
+done
+Setting up python3-problem-report (2.14.1-0ubuntu3.21) ...
+Setting up python3-apport (2.14.1-0ubuntu3.21) ...
+Setting up apport (2.14.1-0ubuntu3.21) ...
+apport start/running
+Setting up os-prober (1.63ubuntu1.1) ...
+Setting up cloud-guest-utils (0.27-0ubuntu9.2) ...
+Setting up grub-legacy-ec2 (0.7.5-0ubuntu1.18) ...
+Searching for GRUB installation directory ... found: /boot/grub
+Searching for default file ... found: /boot/grub/default
+Testing for an existing GRUB menu.lst file ... found: /boot/grub/menu.lst
+Searching for splash image ... none found, skipping ...
+Found kernel: /boot/vmlinuz-3.13.0-74-generic
+Found kernel: /boot/vmlinuz-3.13.0-74-generic
+Replacing config file /run/grub/menu.lst with new version
+Updating /boot/grub/menu.lst ... done
+
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up ifupdown (0.7.47.2ubuntu4.4) ...
+Setting up cloud-init (0.7.5-0ubuntu1.18) ...
+Leaving 'diversion of /etc/init/ureadahead.conf to /etc/init/ureadahead.conf.disabled by cloud-init'
+Setting up perl-modules (5.18.2-2ubuntu1.1) ...
+Setting up perl (5.18.2-2ubuntu1.1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+Processing triggers for initramfs-tools (0.103ubuntu4.3) ...
+update-initramfs: Generating /boot/initrd.img-3.13.0-74-generic
+Processing triggers for ca-certificates (20160104ubuntu0.14.04.1) ...
+Updating certificates in /etc/ssl/certs... 19 added, 19 removed; done.
+Running hooks in /etc/ca-certificates/update.d....done.
+]0;root@ip-10-0-2-53: ~/Documentsroot@ip-10-0-2-53:~/Documents# exit
+exit
+]0;ubuntu@ip-10-0-2-53: ~/Documentsubuntu@ip-10-0-2-53:~/Documents$ exit
+Script done on Wed 06 Jul 2016 10:23:41 PM UTC
