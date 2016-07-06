@@ -1,6 +1,6 @@
-JIB-jbrodnax1 Instance ID: i-9da07d32
-JIB-jbrodnax2 Instance ID: i-e23ae74d
-JIB-bheng1 Instance ID: i-2fdf5bf2
+JIB-jbrodnax1 Instance ID: i-9da07d32 10.0.2.53
+JIB-jbrodnax2 Instance ID: i-e23ae74d 172.31.22.225
+JIB-bheng1 Instance ID: i-2fdf5bf2 172.31.20.77
 =========================
 Instance ID
 =========================
