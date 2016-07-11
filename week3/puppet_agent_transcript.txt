@@ -1,0 +1,223 @@
+[0;32minfo: Caching catalog for ip-10-0-3-181.us-west-2.compute.internal[0m
+[0;32minfo: Applying configuration version '1468268201'[0m
+[0;36mnotice: /Stage[main]/Ssh/Package[openssh-server]/ensure: created[0m
+[0;36mnotice: /Stage[main]/Ssh/Service[sshd]/ensure: ensure changed 'stopped' to 'running'[0m
+[0;36mnotice: /Stage[main]/Ssh/File[/etc/ssh/sshd_config]/content: 
+--- /etc/ssh/sshd_config	2016-03-28 21:36:26.000000000 +0000
++++ /tmp/puppet-file20160711-17690-de7f31-0	2016-07-11 20:22:09.688197973 +0000
+@@ -1,103 +1,80 @@
+-#	$OpenBSD: sshd_config,v 1.93 2014/01/10 05:59:19 djm Exp $
++# Package generated configuration file
++# See the sshd_config(5) manpage for details
+ 
+-# This is the sshd server system-wide configuration file.  See
+-# sshd_config(5) for more information.
+-
+-# This sshd was compiled with PATH=/usr/local/bin:/bin:/usr/bin
+-
+-# The strategy used for options in the default sshd_config shipped with
+-# OpenSSH is to specify options with their default value where
+-# possible, but leave them commented.  Uncommented options override the
+-# default value.
+-
+-# If you want to change the port on a SELinux system, you have to tell
+-# SELinux about this change.
+-# semanage port -a -t ssh_port_t -p tcp #PORTNUMBER
+-#
+-#Port 22
+-#AddressFamily any
+-#ListenAddress 0.0.0.0
++# What ports, IPs and protocols we listen for
++Port 22
++# Use these options to restrict which interfaces/protocols sshd will bind to
+ #ListenAddress ::
+-
+-# The default requires explicit activation of protocol 1
+-#Protocol 2
+-
+-# HostKey for protocol version 1
+-#HostKey /etc/ssh/ssh_host_key
++#ListenAddress 0.0.0.0
++Protocol 2
+ # HostKeys for protocol version 2
+ HostKey /etc/ssh/ssh_host_rsa_key
+-#HostKey /etc/ssh/ssh_host_dsa_key
++HostKey /etc/ssh/ssh_host_dsa_key
+ HostKey /etc/ssh/ssh_host_ecdsa_key
+ HostKey /etc/ssh/ssh_host_ed25519_key
++#Privilege Separation is turned on for security
++UsePrivilegeSeparation yes
+ 
+ # Lifetime and size of ephemeral version 1 server key
+-#KeyRegenerationInterval 1h
+-#ServerKeyBits 1024
+-
+-# Ciphers and keying
+-#RekeyLimit default none
++KeyRegenerationInterval 3600
++ServerKeyBits 1024
+ 
+ # Logging
+-# obsoletes QuietMode and FascistLogging
+-#SyslogFacility AUTH
+-SyslogFacility AUTHPRIV
+-#LogLevel INFO
++SyslogFacility AUTH
++LogLevel INFO
+ 
+ # Authentication:
++LoginGraceTime 120
++PermitRootLogin without-password
++StrictModes yes
++
++RSAAuthentication yes
++PubkeyAuthentication yes
++#AuthorizedKeysFile	%h/.ssh/authorized_keys
+ 
+-#LoginGraceTime 2m
+-#PermitRootLogin yes
+-# Only allow root to run commands over ssh, no shell
+-PermitRootLogin forced-commands-only
+-#StrictModes yes
+-#MaxAuthTries 6
+-#MaxSessions 10
+-
+-#RSAAuthentication yes
+-#PubkeyAuthentication yes
+-
+-# The default is to check both .ssh/authorized_keys and .ssh/authorized_keys2
+-# but this is overridden so installations will only check .ssh/authorized_keys
+-AuthorizedKeysFile	.ssh/authorized_keys
+-
+-#AuthorizedPrincipalsFile none
+-
+-#AuthorizedKeysCommand none
+-#AuthorizedKeysCommandUser nobody
+-
+-# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
+-#RhostsRSAAuthentication no
+-# similar for protocol version 2
+-#HostbasedAuthentication no
+-# Change to yes if you don't trust ~/.ssh/known_hosts for
+-# RhostsRSAAuthentication and HostbasedAuthentication
+-#IgnoreUserKnownHosts no
+ # Don't read the user's ~/.rhosts and ~/.shosts files
+-#IgnoreRhosts yes
++IgnoreRhosts yes
++# For this to work you will also need host keys in /etc/ssh_known_hosts
++RhostsRSAAuthentication no
++# similar for protocol version 2
++HostbasedAuthentication no
++# Uncomment if you don't trust ~/.ssh/known_hosts for RhostsRSAAuthentication
++#IgnoreUserKnownHosts yes
+ 
+-# To disable tunneled clear text passwords, change to no here!
+-#PasswordAuthentication yes
+-#PermitEmptyPasswords no
+-# EC2 uses keys for remote access
+-PasswordAuthentication no
++# To enable empty passwords, change to yes (NOT RECOMMENDED)
++PermitEmptyPasswords no
+ 
+-# Change to no to disable s/key passwords
+-#ChallengeResponseAuthentication yes
++# Change to yes to enable challenge-response passwords (beware issues with
++# some PAM modules and threads)
+ ChallengeResponseAuthentication no
+ 
++# Change to no to disable tunnelled clear text passwords
++PasswordAuthentication no
++
+ # Kerberos options
+ #KerberosAuthentication no
++#KerberosGetAFSToken no
+ #KerberosOrLocalPasswd yes
+ #KerberosTicketCleanup yes
+-#KerberosGetAFSToken no
+-#KerberosUseKuserok yes
+ 
+ # GSSAPI options
+ #GSSAPIAuthentication no
+ #GSSAPICleanupCredentials yes
+-#GSSAPIStrictAcceptorCheck yes
+-#GSSAPIKeyExchange no
+-#GSSAPIEnablek5users no
++
++X11Forwarding yes
++X11DisplayOffset 10
++PrintMotd no
++PrintLastLog yes
++TCPKeepAlive yes
++#UseLogin no
++
++#MaxStartups 10:30:60
++#Banner /etc/issue.net
++
++# Allow client to pass locale environment variables
++AcceptEnv LANG LC_*
++
++Subsystem sftp /usr/lib/openssh/sftp-server
+ 
+ # Set this to 'yes' to enable PAM authentication, account processing,
+ # and session processing. If this is enabled, PAM authentication will
+@@ -108,51 +85,4 @@
+ # If you just want the PAM account and session checks to run without
+ # PAM authentication, then enable this but set PasswordAuthentication
+ # and ChallengeResponseAuthentication to 'no'.
+-# WARNING: 'UsePAM no' is not supported in Amazon Linux AMI and may cause several
+-# problems.
+-# Leaving enabled as described so that account and session checks are run
+ UsePAM yes
+-
+-#AllowAgentForwarding yes
+-#AllowTcpForwarding yes
+-#GatewayPorts no
+-X11Forwarding yes
+-#X11DisplayOffset 10
+-#X11UseLocalhost yes
+-#PermitTTY yes
+-#PrintMotd yes
+-# Explicitly enable
+-PrintLastLog yes
+-#TCPKeepAlive yes
+-#UseLogin no
+-UsePrivilegeSeparation sandbox		# Default for new installations.
+-#PermitUserEnvironment no
+-#Compression delayed
+-#ClientAliveInterval 0
+-#ClientAliveCountMax 3
+-#ShowPatchLevel no
+-#UseDNS yes
+-#PidFile /var/run/sshd.pid
+-#MaxStartups 10:30:100
+-#PermitTunnel no
+-#ChrootDirectory none
+-#VersionAddendum none
+-
+-# no default banner path
+-#Banner none
+-
+-# Accept locale-related environment variables
+-AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
+-AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
+-AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE
+-AcceptEnv XMODIFIERS
+-
+-# override default of no subsystems
+-Subsystem	sftp	/usr/libexec/openssh/sftp-server
+-
+-# Example of overriding settings on a per-user basis
+-#Match User anoncvs
+-#	X11Forwarding no
+-#	AllowTcpForwarding no
+-#	PermitTTY no
+-#	ForceCommand cvs server
+[0m
+[0;32minfo: FileBucket got a duplicate file {md5}51efeaaa928664d0a29b9c8ab79f1f17[0m
+[0;32minfo: /Stage[main]/Ssh/File[/etc/ssh/sshd_config]: Filebucketed /etc/ssh/sshd_config to puppet with sum 51efeaaa928664d0a29b9c8ab79f1f17[0m
+[0;36mnotice: /Stage[main]/Ssh/File[/etc/ssh/sshd_config]/content: content changed '{md5}51efeaaa928664d0a29b9c8ab79f1f17' to '{md5}db3706831d16ac32d8665fbfb47dbd99'[0m
+[0;36mnotice: /Stage[main]/Ssh/File[/etc/ssh/sshd_config]/mode: mode changed '0600' to '0644'[0m
+[0;36mnotice: /Stage[main]//Node[ip-10-0-3-181]/Ssh_authorized_key[bheng-key-pair-oregon]/ensure: created[0m
+[0;36mnotice: /Stage[main]//Node[ip-10-0-3-181]/Ssh_authorized_key[JIB-jbrodnax2-home]/ensure: created[0m
+[0;36mnotice: /Stage[main]//Node[ip-10-0-3-181]/Ssh_authorized_key[JIB-jbrodnax2-laptop]/ensure: created[0m
+[0;36mnotice: Finished catalog run in 1.67 seconds[0m
