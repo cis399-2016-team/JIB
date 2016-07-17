@@ -1,10 +1,12 @@
-[0;32minfo: Caching catalog for ip-10-0-3-181.us-west-2.compute.internal[0m
-[0;32minfo: Applying configuration version '1468268201'[0m
-[0;36mnotice: /Stage[main]/Ssh/Package[openssh-server]/ensure: created[0m
-[0;36mnotice: /Stage[main]/Ssh/Service[sshd]/ensure: ensure changed 'stopped' to 'running'[0m
-[0;36mnotice: /Stage[main]/Ssh/File[/etc/ssh/sshd_config]/content: 
+[0;32minfo: Caching catalog for ip-10-0-2-226.us-west-2.compute.internal[0m
+[0;32minfo: Applying configuration version '1468795628'[0m
+[0;36mnotice: /Stage[main]/Ec2-agents/Ssh_authorized_key[bheng-key-pair-oregon]/ensure: created[0m
+[0;36mnotice: /Stage[main]/Ec2-agents/Ssh_authorized_key[JIB-jbrodnax2-home]/ensure: created[0m
+[0;36mnotice: /Stage[main]/Ec2-agents/Ssh_authorized_key[JIB-jbrodnax2-laptop]/ensure: created[0m
+[0;36mnotice: /Stage[main]/Sshd/Package[openssh-server]/ensure: created[0m
+[0;36mnotice: /Stage[main]/Sshd/File[/etc/ssh/sshd_config]/content: 
 --- /etc/ssh/sshd_config	2016-03-28 21:36:26.000000000 +0000
-+++ /tmp/puppet-file20160711-17690-de7f31-0	2016-07-11 20:22:09.688197973 +0000
++++ /tmp/puppet-file20160717-6179-16uehf0-0	2016-07-17 22:53:26.440357685 +0000
 @@ -1,103 +1,80 @@
 -#	$OpenBSD: sshd_config,v 1.93 2014/01/10 05:59:19 djm Exp $
 +# Package generated configuration file
@@ -214,10 +216,13 @@
 -#	ForceCommand cvs server
 [0m
 [0;32minfo: FileBucket got a duplicate file {md5}51efeaaa928664d0a29b9c8ab79f1f17[0m
-[0;32minfo: /Stage[main]/Ssh/File[/etc/ssh/sshd_config]: Filebucketed /etc/ssh/sshd_config to puppet with sum 51efeaaa928664d0a29b9c8ab79f1f17[0m
-[0;36mnotice: /Stage[main]/Ssh/File[/etc/ssh/sshd_config]/content: content changed '{md5}51efeaaa928664d0a29b9c8ab79f1f17' to '{md5}db3706831d16ac32d8665fbfb47dbd99'[0m
-[0;36mnotice: /Stage[main]/Ssh/File[/etc/ssh/sshd_config]/mode: mode changed '0600' to '0644'[0m
-[0;36mnotice: /Stage[main]//Node[ip-10-0-3-181]/Ssh_authorized_key[bheng-key-pair-oregon]/ensure: created[0m
-[0;36mnotice: /Stage[main]//Node[ip-10-0-3-181]/Ssh_authorized_key[JIB-jbrodnax2-home]/ensure: created[0m
-[0;36mnotice: /Stage[main]//Node[ip-10-0-3-181]/Ssh_authorized_key[JIB-jbrodnax2-laptop]/ensure: created[0m
-[0;36mnotice: Finished catalog run in 1.67 seconds[0m
+[0;32minfo: /Stage[main]/Sshd/File[/etc/ssh/sshd_config]: Filebucketed /etc/ssh/sshd_config to puppet with sum 51efeaaa928664d0a29b9c8ab79f1f17[0m
+[0;36mnotice: /Stage[main]/Sshd/File[/etc/ssh/sshd_config]/content: content changed '{md5}51efeaaa928664d0a29b9c8ab79f1f17' to '{md5}db3706831d16ac32d8665fbfb47dbd99'[0m
+[0;36mnotice: /Stage[main]/Sshd/File[/etc/ssh/sshd_config]/mode: mode changed '0600' to '0644'[0m
+[0;32minfo: /Stage[main]/Sshd/File[/etc/ssh/sshd_config]: Scheduling refresh of Service[sshd][0m
+[0;32minfo: /Stage[main]/Sshd/File[/etc/ssh/sshd_config]: Scheduling refresh of Service[sshd][0m
+[0;32minfo: /Stage[main]/Sshd/File[/etc/ssh/sshd_config]: Scheduling refresh of Service[sshd][0m
+[0;32minfo: /Stage[main]/Sshd/File[/etc/ssh/sshd_config]: Scheduling refresh of Service[sshd][0m
+[0;36mnotice: /Stage[main]/Sshd/Service[sshd]/ensure: ensure changed 'stopped' to 'running'[0m
+[0;36mnotice: /Stage[main]/Sshd/Service[sshd]: Triggered 'refresh' from 4 events[0m
+[0;36mnotice: Finished catalog run in 1.55 seconds[0m
