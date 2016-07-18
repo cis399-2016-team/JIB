@@ -1,0 +1,58 @@
+(1) JIB-jbrodnax2 Web Page URL: 
+http://ec2-52-34-228-17.us-west-2.compute.amazonaws.com/index.html
+ 
+(2) Web Page Access Logs: 
+10.0.2.245 - - [18/Jul/2016:19:42:39 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
+10.0.2.245 - - [18/Jul/2016:19:42:39 +0000] "GET / HTTP/1.1" 200 87 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
+10.0.2.245 - - [18/Jul/2016:19:42:39 +0000] "GET / HTTP/1.1" 200 87 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
+10.0.2.245 - - [18/Jul/2016:19:42:40 +0000] "GET / HTTP/1.1" 200 87 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
+24.20.206.102 - - [18/Jul/2016:19:44:52 +0000] "GET /index.html HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
+24.20.206.102 - - [18/Jul/2016:19:44:52 +0000] "GET /index.html HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
+24.20.206.102 - - [18/Jul/2016:19:44:52 +0000] "GET /index.html HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
+ 
+(3) Load Balancer Domain Name: 
+http://jib-1557682888.us-west-2.elb.amazonaws.com/
+ 
+(4) Results of Load Balancer Test: 
+After shutting down the apache service on one back-end instance, I was still able to access the web page via the LB domain name.
+However, after shutting down the apache service on both back-end instances, the web page would not display at all. 
+Once the apache service was resumed on either or both instances, the web page would be displayed correctly.
+ 
+(5) Logs of Health Checks: 
+10.0.2.245 - - [18/Jul/2016:19:38:54 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:39:16 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:39:24 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:39:46 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:39:54 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:40:16 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:40:24 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:40:46 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:40:54 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:41:16 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:41:24 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:41:46 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:41:54 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:42:16 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:42:24 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:42:46 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:42:54 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:43:16 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:43:24 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:43:46 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:43:54 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:44:16 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:44:24 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:44:46 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:44:54 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:45:16 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:45:24 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:45:46 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:45:54 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:46:16 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:46:24 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.125 - - [18/Jul/2016:19:46:46 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+10.0.2.245 - - [18/Jul/2016:19:46:54 +0000] "GET /index.html HTTP/1.1" 200 87 "-" "ELB-HealthChecker/1.0"
+ 
+(6) Puppet Modules for Web Service and Page Management: 
+The Puppet module for managing Apache can be found under our <Apache> module directory and the Puppet module <web-content> manages our page content
+ 
