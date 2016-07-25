@@ -1,0 +1,35 @@
+Team-A:
+
+	ssh: jbrodnax@52.36.169.138
+	Login: Successful
+
+Orange-Banana:
+
+	ssh: jbrodnax@52.10.217.161
+	Login: Successful
+
+Rumpus:
+
+	ssh: 
+	Login: Unsuccessful
+	Recieved ssh debug output:
+
+		debug1: read PEM private key done: type RSA
+		debug1: Authentications that can continue: publickey
+		debug1: No more authentication methods to try.
+		Permission denied (publickey).
+
+Chilled-Beer:
+
+	ssh: jbrodnax@52.42.164.26
+	Login: Successful
+
+CaluyaCostello:
+
+	ssh: jbrodnax@52.39.165.25
+	Login: Successful
+
+That-One-Team:
+
+	ssh: jbrodnax@52.10.107.181
+	Login: Successful
