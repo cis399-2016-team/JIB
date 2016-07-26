@@ -10,14 +10,8 @@ Orange-Banana:
 
 Rumpus:
 
-	ssh: 
-	Login: Unsuccessful
-	Recieved ssh debug output:
-
-		debug1: read PEM private key done: type RSA
-		debug1: Authentications that can continue: publickey
-		debug1: No more authentication methods to try.
-		Permission denied (publickey).
+	ssh: jbrodnax@52.42.83.189
+	Login: Successful
 
 Chilled-Beer:
 
