@@ -14,45 +14,45 @@ can then be used to manage traffic; an issue I've been struggling with by hostin
 we will need to ensure that the website is hosted stably in the face of relatively heavy traffic,
 and that the website is easy to manage and update by using Puppet. In order to test this goal, we can use the same methods of verification used in the 
 week4 assignment; try to connect to the page's URL and various subdirectories, check access logs, and toggle Apache to test the Load Balancer.
-	The second goal of our project will be to implement CTF style security challanges on one of our Puppet agent instances. Each 
-challange will pertain to a unique user account with specific privileges and specific file resources. Puppet will be used to ensure 
+	The second goal of our project will be to implement CTF style security challenges on one of our Puppet agent instances. Each 
+challenge will pertain to a unique user account with specific privileges and specific file resources. Puppet will be used to ensure 
 that the accounts, resources, and associated privileges remain present and intact. 
-	More specifically, we want to create a contained enviornment for testing specific security 
+	More specifically, we want to create a contained environment for testing specific security 
 vulnerabilities by using Puppet to ensure that associated accounts, resources, and privileges are present, unaltered, but  
-corrected in the event that they are altered. In order to better ensure containment of the enviornment, we will implement a chroot-jail that
-will house all security challange-associated user accounts. The chroot-jail will only have necessary command-line tools and binaries mounted in it, 
-and we will create all the challanges and file resources from scratch.
+corrected in the event that they are altered. In order to better ensure containment of the environment, we will implement a chroot-jail that
+will house all security challenge-associated user accounts. The chroot-jail will only have necessary command-line tools and binaries mounted in it, 
+and we will create all the challenges and file resources from scratch.
 	To test and verify that these goals are met, we will check that all accounts and accounts are present on the system, and that the privilege
-levels are correct. From there we will complete each of the challanges and test the extent of their exploitation to ensure that the testing
-enviornment is well contained.
+levels are correct. From there we will complete each of the challenges and test the extent of their exploitation to ensure that the testing
+environment is well contained.
 
 
 User Population Effect and Support Issues:
 
 	This project's effect on its user population will be beneficial in that it will provide a seamless and consolidated location
 for learning entry-level computer security topics. User support issues might include limited system hardware resource availability,
-unforseen exit points from the contained testing enviornment and a presumably ensuing system compromization.
+unforeseen exit points from the contained testing environment and a presumably ensuing system compromisation.
 
 
 Security Issues:
 
-	The problem that comes with creating a security testing enviornment is that you're asking users to exploit purposefully crafted 
-vulnerabilities on a shared system, but making sure that the vulnerability's scope is within the testing enviornment and that
-unintended vulnerabilites aren't created in the process. If a user finds an unintentional vulnerability, exploits it, and escapes the testing 
-enviornment, then the whole system could be compromised and the fun would be ruined for everyone. The other security issue is that some of the user 
-accounts for the security challanges will need to rely on password authentication instead of public key encryption. So the passwords will need to be
+	The problem that comes with creating a security testing environment is that you're asking users to exploit purposefully crafted 
+vulnerabilities on a shared system, but making sure that the vulnerability's scope is within the testing environment and that
+unintended vulnerabilities aren't created in the process. If a user finds an unintentional vulnerability, exploits it, and escapes the testing 
+environment, then the whole system could be compromised and the fun would be ruined for everyone. The other security issue is that some of the user 
+accounts for the security challenges will need to rely on password authentication instead of public key encryption. So the passwords will need to be
 very strong.
 
 
 Work Needed For Completion and Automated Maintenance:
 
-	The work needed to complete the website hosting will be to create a Puppet module incharge of ensuring that all of the resources are 
+	The work needed to complete the website hosting will be to create a Puppet module in-charge of ensuring that all of the resources are 
 present, and then the Apache and sshd Puppet modules can be used to ensure that the necessary services to connect to the website are running.
 The website resource files can be pushed to a git repo of its own, where updates, maintenance, and changes can be made and then have Puppet 
 periodically pull from it to ensure the website is up-to-date.
-	As for the security testing enviornment, a Puppet module can be made that will ensure the chroot-jail is present, has correct ownership,
+	As for the security testing environment, a Puppet module can be made that will ensure the chroot-jail is present, has correct ownership,
 and has correct user accounts associated with it. The module can then ensure that the exact files and privileges pertaining to a certain user
-account and associated challange are present and unaltered. A cron job can be created on the Puppet agent to check with the Puppet master
+account and associated challenge are present and unaltered. A cron job can be created on the Puppet agent to check with the Puppet master
 more often than usual to make sure system configurations are unaltered and take appropriate action if they are, hence a compromise.
 Almost all maintenance can be done through Puppet and git, ensuring that the project is portable and easily maintainable.
 
@@ -68,9 +68,9 @@ TL;DR:
 			- Toggle Apache to test Load Balancer
 
 	2nd Goal:
-		- Implement CTF-style security challanges on one Puppet agent
-		- Create three security challanges
-		- Create unique user account for each challange
+		- Implement CTF-style security challenges on one Puppet agent
+		- Create three security challenges
+		- Create unique user account for each challenge
 		- Limit user accounts to a chroot-jail
 		- Create Puppet modules to maintain chroot-jail and associated user accounts
 
@@ -78,19 +78,20 @@ TL;DR:
 			- Check that the chroot-jail exists
 			- Check that the user accounts exists within the chroot-jail
 			- Check that privilege levels are correct
-			- Exploit vulnerability of each challange as much as possible to ensure correct functionality and scope
+			- Exploit vulnerability of each challenge as much as possible to ensure correct functionality and scope
 
 	User Effect and Support Issues:
 		- Teach hands on entry-level security topics
 		- Limited system resource availability (too much traffic or too many users)
 
 	Security Issues:
-		- System compromization from poorly-contained testing enviornment
+		- System compromisation from poorly-contained testing environment
 		- Relying on password authentication instead of public key encryption
 
 	Required Work and Automated Maintenance:
 		- Create necessary Puppet modules for website and chroot-jail
 		- Create git repo for website resources
-		- Create security challanges
+		- Create security challenges
 		- Create cron job to automate frequent system configuration and integrity checks/updates
 		
+
