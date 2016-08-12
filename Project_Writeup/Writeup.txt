@@ -1,0 +1,74 @@
+Team: JIB
+Members:
+	John Brodnax
+	Brenda Heng
+
+Final Project Writeup
+
+(1) Concrete Goals, Methods, and Testing
+
+	The goal of this project was to create a CTF-style security testing environment on one of our AWS instances. The environment
+would be contained in a chroot-jail that consisted of multiple accounts, where each account would house a unique security challenge.
+Each security challenge is based on software vulnerabilites and privilege escalation within a Unix system. The user must identify 
+the vulnerability and then use it to escalate their privileges to the next user account or "level". The user can then proceed to move 
+through all of the accounts in the chroot-jail, one-by-one, and complete each challenge. From there we needed to create a Puppet module
+that would maintain the important resources and their respective permissions. This would allow us to make the environment easier to migrate, 
+as well as help to reinforce the integrity of the environment in the event a user modified a resource. Each challenge is based on a buffer-
+overflow vulnerability that is intended to familiarize the user with creating ROP chains to leverage execution flow and how it used to 
+circumvent ASLR and non-executable stacks.
+	Once the environment, user accounts, and challenges were created and implemented, we needed to test the vulnerabilites 
+ourselves to ensure that, one, the vulnerabilites were properly implemented, and two, the scope of the vulnerabilites were contained 
+within the testing environment (i.e. can't be used to escape the chroot-jail or destroy it). To do this, we created payloads in python 
+to exploit each level's vulnerability, and then completed every level in order as a normal user would. Furthermore, as root, we edited 
+permissions, and various file contents that are handled by that puppet module to ensure that they would be fixed. As of now, all tests 
+proved to be successful.
+
+(2) User Effect and Support
+
+	The purpose of this project is to create an easily accessible, hands-on learning environment for users to educate themselves 
+on particular computer security vulnerabilites, how they can be exploited, and how they can be avoided/fixed. The target audience for 
+this project are attendees of the UO Security Club. During a lecture it can be time consuming and difficult to ensure that everyone 
+has the virtual machine or software for a demonstration correctly configured or installed. This project will help to alleviate that by providing an 
+environment that anyone with ssh can immediately access all simultaniously (excluding hardware resource limits). Users will only need to be 
+provided the address and level password to gain access. In which case, password distribution will have to restricted but is the only user 
+support that will be necessary aside from teaching users how to navigate the environment or how a vulnerability works.
+
+(3) Security Issues
+
+	Aside from the purposefully-placed vulnerabilites, there are three general security issues that we can think of. The first being 
+password authentication and distribution and the possibility of an unwanted user gaining access. The passwords are very strong, but they're 
+never as strong as public key authentication. The second issue could be that we accidentally placed a symbolic-link in the chrooted 
+environment that points outside of the chroot-jail. In which case, a user could leverage that to escape the chroot-jail. And lastly 
+is the scope of the vulnerabilites for each level being larger than intended per a lack of knowledge or accident in implementation 
+on our part.
+
+(4) Work Needed for Completion and Maintenance
+
+	The work we had to do to complete this project was fairly tedious. We had to start by creating a directory for the chroot and then 
+create the subdirectories for any libraries and binaries that we wanted to provide users of the environment. We then had to copy the libraries, 
+commands, and any of their dependancies into the correct subdirectories. From there, we had to create the user accounts for each level and place 
+their home directories and their identification info (such as passwd, shadow, and group entries) into the chroot directory. Afterwards, we needed 
+to ensure that all of the subdirectories and files had correct permissions and ownership. Once the environment was properly configured, we had 
+to edit the sshd_config file to match each of the chrooted users to their chrooted home directories upon ssh login. After testing that a user 
+could cleanly use the environment via ssh, we wrote vulnerable programs in C and placed one in each user account, set their ownership to a 
+different user account, and gave it the set user ID bit. After testing that the vulnerabilites in each account worked as intended, we created 
+documentation to help a user, such as banner files explaining the general layout of the challenges and README files for each level explaining 
+what topics need to be understood in order to complete the challenge. Once everything in the environment worked as intended, we created the 
+Puppet module to maintain the user accounts and file resources for the project.
+	As for maintenance, we added bash commands to the .bashrc and .bash_logout files of each user's home directory that will create a 
+temporary folder in the "/tmp/" directory upon login and remove it upon logout. The purpose of this temporary folder is to provide a place for a 
+user to work on a challenge without interfering with other user's work. It's also the only directory in the environment that a user has 
+write permissions. This provides an easy way to keep the envirnment clean but give users a space to work.
+
+(5) Documentation
+
+	A welcome_banner file was placed in each user's home directory that is displayed upon login. The welcome banner describes the general 
+purpose and structure of the project, such as where challenges are located, where flags are located, where they have permissions to navigate, and
+security features that are enabled on the system. README files were also placed in each user's home directory that explain in more detail what is 
+expected to be able to complete the respective challenge and some hints to get them in the right direction. Aside from that, there isn't much else 
+documented besides this writeup and our Puppet module comments.
+
+Extra:
+
+	If you want to checkout the project, the first level is at: level0@52.34.228.17  password: arX7eUqBQ@GC!7Qm
+For now, I've left the solutions and source code (for testing purposes) for each challenge in the home directory of the level.
